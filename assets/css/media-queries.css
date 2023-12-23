@@ -1,0 +1,91 @@
+@media screen and (min-width: 576px) {
+    .landing .landing-image {
+        display: flex;
+    }
+
+    .landing .landing-image img {
+        width: 75%;
+    }
+    .register-form .input-holder {
+        display: flex;
+        height: 35px;
+    }
+    .register-form .input-holder label {
+        width: 25%;
+    }
+    
+    .register-form .input-holder>*:nth-child(2) {
+        width: 75%;
+        max-width: 75%;
+    }
+    .register-form .national-code-wrapper {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header .main-nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .reserve-form {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .section-header {
+        font-weight: 400;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+    .landing {
+        display: flex;
+    }
+
+    .landing-tips {
+        margin-left: 30px;
+        text-align: start;
+    }
+
+    .landing-tip {
+        padding-right: 22px;
+    }
+
+    .landing .landing-image {
+        display: block;
+    }
+
+    .landing-tips.closed {
+        max-height: max-content;
+    }
+
+    .landing-tips.closed::after {
+        display: none !important;
+    }
+
+    .landing-tips .opener {
+        display: none;
+    }
+
+    .landing-tip:before {
+        display: block;
+    }
+
+    .header .main-nav {
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+    .landing .landing-image img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .form-image {
+        max-width: 240px;
+    }
+}

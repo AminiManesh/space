@@ -1,0 +1,55 @@
+.theme2 {
+    --very-dark: #1C1C28;
+    --main-dark: #28293D;
+    --second-dark: #32334d;
+    --hover-dark: #4A4B6D;
+    --main-blue: #D946EF;
+    --main-white: #ffffff;
+    --main-green: #2ED573;
+    --hover-green: #22c55e;
+    --main-yellow: #FBBF24;
+    --main-red: #F43F5E;
+    --main-gray: #94A3B8;
+    color: var(--main-white);
+}
+
+.theme2.backimage {
+    background: var(--very-dark);
+}
+
+.theme2 .main-link {
+    background: var(--main-green);
+    color: var(--main-white);
+    border: 2px solid var(--main-green);
+}
+
+.theme2 .main-link:hover {
+    background: transparent;
+}
+
+.theme2 .gray-text {
+    color: var(--main-blue);
+}
+
+.theme2 .landing-tip {
+    color: var(--main-gray);
+}
+
+.theme2 .main-input {
+    border: 3px dashed var(--hover-dark);
+    background: var(--main-dark);
+    color: var(--main-white) !important;
+}
+
+.theme2 .main-select {
+    border: 3px solid var(--hover-dark);
+    background: var(--second-dark);
+    color: var(--main-white);
+    box-shadow: none;
+}
+
+.theme2 .theme-popup>a {
+    background: var(--main-dark);
+    border-color: var(--hover-dark);
+    color: var(--main-green);
+}

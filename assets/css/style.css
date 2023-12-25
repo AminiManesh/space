@@ -33,6 +33,7 @@
 :root {
     --light-blue: #09aff4;
     --dark-blue: #060922;
+    --mid-blue: #0c5adb;
     --white: #fff;
 }
 
@@ -97,19 +98,111 @@ ul {
     transition: 0.3s background ease, 0.3s color ease;
 }
 
+.custom-button-sm {
+    padding: 5px 20px;
+    font-size: 1rem;
+}
+
 .custom-button:hover {
     background: var(--light-blue);
     color: var(--white);
 }
 
+.anim {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.anim.show {
+    opacity: 1;
+}
+
 /* ------ */
+
+.load-screen {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: var(--light-blue);
+    z-index: 15;
+}
+
+.load-progress {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 100%;
+    font-size: 40px;
+    font-weight: 700;
+    overflow: hidden;
+    background: var(--dark-blue);
+    transition: width 2s ease-out;
+}
+
+.load-progress.loading {
+    width: 100%;
+}
+
+.load-progress::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(calc(50% + 80px));
+    left: 0;
+    background: var(--white);
+}
+
+.navbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 10;
+    transition: background 0.3s ease, padding 0.3s ease;
+}
+
+.navbar.active {
+    background: var(--light-blue);
+    padding: 15px 0;
+}
+
+.navbar h1 {
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: 1px;
+    transition: font-size 0.3s ease;
+}
+
+.navbar h1 .highlight {
+    color: var(--white);
+}
+
+.navbar.active h1 {
+    font-size: 28px;
+}
+
+.header-slot {
+    height: 100vh;
+    background: transparent;
+}
 
 .header {
     display: flex;
     align-items: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    /* background: #1A1C36; */
+    z-index: 1;
 }
 
 .header-overlay {
@@ -135,6 +228,8 @@ ul {
 }
 
 .header-content {
+    display: flex;
+    align-items: center;
     position: relative;
     width: 100%;
     height: 100%;
@@ -171,7 +266,10 @@ ul {
     font-size: 26px;
     color: var(--white);
 }
-
+.animated-button-sm {
+    width: 60px;
+    height: 60px;
+}
 .animated-button i {
     position: absolute;
     top: 50%;
@@ -187,12 +285,14 @@ ul {
     height: 100%;
     /* transform: translate(-50%, -50%); */
     border-radius: 50%;
-    border: 8px solid rgba(255, 255, 255, 0.7);
+    border: 8px solid var(--white);
     border-left-color: transparent;
     border-right-color: transparent;
     animation: spin 10s infinite alternate linear, glow 5s infinite alternate linear;
 }
-
+.animated-button-sm .spinner {
+    border-width: 5px;
+}
 .animated-button .spinner::before {
     content: '';
     position: absolute;
@@ -202,13 +302,15 @@ ul {
     height: calc(100% - 2px);
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 12px solid rgba(255, 255, 255, .9);
+    border: 12px solid var(--light-blue);
     border-top-color: transparent;
     border-bottom-color: transparent;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     animation: spin2 5s infinite alternate linear, glow 3s infinite alternate linear;
 }
-
+.animated-button-sm .spinner::before {
+    border-width: 8px;
+}
 @keyframes spin {
     0% {
         -webkit-transform: rotate(360deg);
@@ -260,4 +362,128 @@ ul {
     clip-path: polygon(50% 100%, 100% 0%, 100% 100%, 0 100%);
     background: rgba(0, 5, 109, 0.7);
     z-index: 2;
+}
+
+.general-content {
+    position: relative;
+    display: block;
+    height: 2000px;
+    width: 100%;
+    padding: 100px 0;
+    z-index: 6;
+    background: var(--dark-blue);
+}
+
+.flipbox {
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+    -webkit-transform-style: preserve-3d;
+    z-index: 1;
+}
+
+.flipbox .flipbox-font,
+.flipbox .flipbox-back {
+    min-height: 250px;
+    height: auto;
+    box-shadow: 0px 1px 51.3px 5.7px rgba(137, 143, 156, .15);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0);
+    -webkit-transform: rotateX(0);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform .7s ease, -webkit-transform .7s ease;
+    position: relative;
+}
+
+.flipbox .flipbox-inner {
+    text-align: center;
+    padding: 0 25px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    perspective: inherit;
+    -webkit-perspective: inherit;
+    outline: transparent solid 1px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+    transform: translateY(-50%) translateZ(60px) scale(0.94);
+    z-index: 2;
+}
+
+.flipbox-font {
+    border: 1px solid #0c5adb;
+    border-radius: 8px;
+}
+
+.flipbox .flipbox-font {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    border: 0;
+}
+
+.flipbox .flipbox-font {
+    background: #181b2d;
+}
+
+.flipbox .flipbox-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 2px;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.flipbox .flipbox-back {
+    background: #0c5adb;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+    border-radius: 8px;
+}
+
+.flipbox:hover .flipbox-font {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+}
+
+.flipbox:hover .flipbox-back {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+.flipbox-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 30px;
+    width: 80px;
+    height: 80px;
+    background: var(--light-blue);
+    border-radius: 41% 59% 26% 74% / 56% 60% 40% 44%;
+    margin: 0 auto 40px;
+}
+
+.flipbox-title h3 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.flipbox-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 40px;
 }

@@ -31,15 +31,6 @@ $(document).ready(function () {
         console.log('callback - particles.js config loaded');
     });
 
-
-    VanillaTilt.init(document.querySelector(".tilt"), {
-        max: 20,
-        speed: 10000,
-        perspective: 1000
-    });
-    //It also supports NodeList
-    VanillaTilt.init(document.querySelectorAll(".tilt"));
-
     $(window).on('scroll', function () {
         navbarCheck();
         $('.anim').each(function (index, element) {
@@ -48,8 +39,19 @@ $(document).ready(function () {
                 $(this).addClass('show');
                 $(this).addClass($(this).attr("animMode"));
                 $(this).addClass($(this).attr("animDuration"));
+                $(this).addClass($(this).attr("animDelay"));
             }
         });
+    });
+
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 20,
+        speed: 10000,
+        perspective: 1000
+    });
+
+    Fancybox.bind("[data-fancybox]", {
+        // options
     });
 });
 

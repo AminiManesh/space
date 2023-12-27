@@ -34,6 +34,7 @@
     --light-blue: #09aff4;
     --dark-blue: #060922;
     --mid-blue: #0c5adb;
+    --high-blue: #042143;
     --white: #fff;
 }
 
@@ -66,8 +67,24 @@ ul {
 
 /* ------ */
 
-.bi.vertical-center {
+.bi.vertical-center::before {
     vertical-align: middle;
+}
+
+.main-section {
+    padding: 100px 0;
+}
+
+.mini-title {
+    display: inline-block;
+    color: var(--light-blue);
+    border: 2px solid var(--light-blue);
+    padding: 0px 6px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .page-title {
@@ -80,6 +97,12 @@ ul {
     opacity: 0.5;
     font-size: 1.25rem;
     font-weight: 400;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 35px;
 }
 
 .highlight {
@@ -109,11 +132,13 @@ ul {
 }
 
 .anim {
+    visibility: hidden;
     opacity: 0;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease, visibility 1s ease;
 }
 
 .anim.show {
+    visibility: visible;
     opacity: 1;
 }
 
@@ -266,10 +291,12 @@ ul {
     font-size: 26px;
     color: var(--white);
 }
+
 .animated-button-sm {
     width: 60px;
     height: 60px;
 }
+
 .animated-button i {
     position: absolute;
     top: 50%;
@@ -290,9 +317,11 @@ ul {
     border-right-color: transparent;
     animation: spin 10s infinite alternate linear, glow 5s infinite alternate linear;
 }
+
 .animated-button-sm .spinner {
     border-width: 5px;
 }
+
 .animated-button .spinner::before {
     content: '';
     position: absolute;
@@ -308,9 +337,11 @@ ul {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     animation: spin2 5s infinite alternate linear, glow 3s infinite alternate linear;
 }
+
 .animated-button-sm .spinner::before {
     border-width: 8px;
 }
+
 @keyframes spin {
     0% {
         -webkit-transform: rotate(360deg);
@@ -367,9 +398,7 @@ ul {
 .general-content {
     position: relative;
     display: block;
-    height: 2000px;
     width: 100%;
-    padding: 100px 0;
     z-index: 6;
     background: var(--dark-blue);
 }
@@ -486,4 +515,251 @@ ul {
     width: fit-content;
     margin: 0 auto;
     gap: 40px;
+}
+
+
+/* about us section */
+.aboutus-item {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+
+.aboutus-item-icon {
+    min-width: 55px;
+    width: 55px;
+    height: 55px;
+    border-radius: 39% 61% 39% 61% / 69% 40% 60% 31%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--high-blue);
+    color: var(--light-blue);
+    font-size: 26px;
+}
+
+.aboutus-item-text h6 {
+    font-size: 22px;
+}
+
+.aboutus-item-text p {
+    opacity: 0.5;
+}
+
+/* animated banner of about us*/
+.single_banner_thumb_inner img {
+    width: 100%;
+}
+
+.banner_shape {
+    position: relative;
+}
+
+.banner_shape_inner1 {
+    position: absolute;
+    top: 156px;
+    left: 24%;
+}
+
+.section-inner-content p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.banner_shape_inner2 {
+    position: absolute;
+    top: 220px;
+    left: 56%;
+}
+
+.banner_shape_inner3 {
+    position: absolute;
+    top: 162px;
+    left: 92%;
+}
+
+.banner_shape_inner4 {
+    position: absolute;
+    top: 371px;
+    left: 190px;
+}
+
+.banner_shape_inner5 {
+    position: absolute;
+    right: -140px;
+    top: 342px;
+}
+
+.banner_shape_inner6 {
+    position: absolute;
+    right: 55px;
+    bottom: -77px;
+}
+
+.bounce-animate {
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -moz-animation-name: floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: floating;
+    -ms-animation-duration: 2s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-animation-name: floating;
+    -o-animation-duration: 2s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+}
+
+.bounce-animate2 {
+    animation-name: floating2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -moz-animation-name: floating2;
+    -moz-animation-duration: 3s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: floating2;
+    -ms-animation-duration: 3s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-animation-name: floating2;
+    -o-animation-duration: 3s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+}
+
+.bounce-animate3 {
+    animation-name: floating3;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -moz-animation-name: floating3;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: floating3;
+    -ms-animation-duration: 4s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-animation-name: floating3;
+    -o-animation-duration: 4s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+}
+
+.bounce-animate5 {
+    animation-name: floating5;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -moz-animation-name: floating5;
+    -moz-animation-duration: 6s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: floating5;
+    -ms-animation-duration: 6s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-animation-name: floating5;
+    -o-animation-duration: 6s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-timing-function: linear;
+}
+
+.rotating {
+    -webkit-animation-name: rotating;
+    animation-name: rotating;
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@keyframes floating {
+    0% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes floating2 {
+    0% {
+        -webkit-transform: translateY(-60px);
+        transform: translateY(-60px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-60px);
+        transform: translateY(-60px);
+    }
+}
+
+@keyframes floating3 {
+    0% {
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-25px);
+        transform: translateY(-25px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-40px);
+        transform: translateY(-40px);
+    }
+}
+
+@keyframes floating5 {
+    0% {
+        -webkit-transform: translateY(-75px);
+        transform: translateY(-75px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-35px);
+        transform: translateY(-35px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-75px);
+        transform: translateY(-75px);
+    }
+}
+
+@keyframes rotating {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }

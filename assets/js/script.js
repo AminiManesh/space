@@ -1,23 +1,21 @@
 $(window).on('load', function () {
     $('.counter').counter({
-        autoStart: true,           // true/false, default: true
-        duration: 2000,             // milliseconds, default: 1500
-        countFrom: 0,              // start counting at this number, default: 0
-        countTo: 100,                // count to this number, default: 0
-        runOnce: true,              // only run the counter once, default: false
-        placeholder: "?",           // replace the number with this before counting,
-        // most useful with autoStart: false. default: undefined
-        easing: "easeOutSine",     // see http://gsgd.co.uk/sandbox/jquery/easing
-        // for all available effects, see visual examples:
-        // http://easings.net
-        // default: "easeOutQuad"
+        autoStart: true,
+        duration: 1500,
+        countFrom: 0,
+        countTo: 100,
+        runOnce: true,
+        placeholder: "?",
+        easing: "easeOutSine",
+
+
         onStart: function () {
             $('.load-progress').addClass('loading');
-        },     // callback on start of the counting
+        },
         onComplete: function () {
             $('.load-screen').fadeOut(500);
-        },  // callback on completion of the counting
-        numberFormatter:            // function used to format the displayed numbers.
+        },
+        numberFormatter:
             function (number) {
                 return Math.floor(number) + "%";
             }
@@ -26,7 +24,6 @@ $(window).on('load', function () {
 
 
 $(document).ready(function () {
-    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
     particlesJS.load('particles-js', 'assets/particles/particles.json', function () {
         console.log('callback - particles.js config loaded');
     });
@@ -53,6 +50,8 @@ $(document).ready(function () {
     Fancybox.bind("[data-fancybox]", {
         // options
     });
+
+    new WOW().init();
 });
 
 function navbarCheck() {

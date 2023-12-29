@@ -121,14 +121,24 @@ ul {
     transition: 0.3s background ease, 0.3s color ease;
 }
 
-.custom-button-sm {
-    padding: 5px 20px;
-    font-size: 1rem;
-}
-
 .custom-button:hover {
     background: var(--light-blue);
     color: var(--white);
+}
+
+.custom-button.reverse {
+    background: var(--light-blue);
+    color: var(--white);
+}
+
+.custom-button.reverse:hover {
+    background: transparent;
+    color: var(--light-blue);
+}
+
+.custom-button-sm {
+    padding: 5px 20px;
+    font-size: 1rem;
 }
 
 .anim {
@@ -140,6 +150,10 @@ ul {
 .anim.show {
     visibility: visible;
     opacity: 1;
+}
+
+.wow {
+    visibility: hidden;
 }
 
 /* ------ */
@@ -537,6 +551,15 @@ ul {
     background: var(--high-blue);
     color: var(--light-blue);
     font-size: 26px;
+    transition: background 0.5s ease,
+        transform 0.5s ease,
+        color 0.5s ease;
+}
+
+.aboutus-item-icon:hover {
+    background: var(--mid-blue);
+    color: var(--white);
+    transform: translateY(-10px)
 }
 
 .aboutus-item-text h6 {
@@ -762,4 +785,104 @@ ul {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
+}
+
+.service2-item {
+    position: relative;
+    background: transparent;
+    border: 1px solid rgba(9, 174, 244, 0.35);
+    border-radius: 10px;
+    padding: 20px 30px;
+    overflow: hidden;
+}
+
+.service2-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: auto;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    border-radius: 10px;
+    background: var(--light-blue);
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+.service2-item:hover::before {
+    left: 0;
+    right: auto;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.service2-item>i {
+    display: block;
+    color: var(--light-blue);
+    font-size: 50px;
+    margin-bottom: 10px !important;
+    transition: color 0.5s ease;
+}
+
+.service2-item:hover>i {
+    color: var(--white) !important;
+}
+
+.service2-item>h4 {
+    font-weight: 600;
+    margin-bottom: 20px !important;
+}
+
+.service2-item>p {
+    opacity: 0.75;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.service2-item>a {
+    color: var(--light-blue) !important;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.5s ease;
+}
+
+.service2-item:hover>a {
+    color: var(--white) !important;
+}
+
+.service2-item>a>i {
+    font-size: 24px;
+    margin-left: 5px;
+    transition: margin 0.5s ease;
+}
+
+.service2-item>a:hover>i {
+    margin-left: 10px;
+}
+
+.aboutus2-item {
+    display: flex;
+    align-items: start;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.aboutus2-item span {
+    display: inline;
+    margin-top: -18px;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--light-blue);
+}
+
+.aboutus2-item h5 {
+    font-size: 1.5rem;
+}
+
+.aboutus2-item p {
+    opacity: 0.75;
 }

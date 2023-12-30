@@ -26,6 +26,19 @@
                     Your <span class="highlight">Logo</span>
                 </a>
             </h1>
+
+            <div class="search-wrapper">
+                <form class="w-100 h-100" action="">
+                    <input class="search-bar" type="text" placeholder="Search...">
+                    <a href="#0">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </form>
+            </div>
+
+            <a href="#0">
+                Sign In / Sign up
+            </a>
         </div>
     </nav>
 
@@ -45,7 +58,8 @@
                             </p>
                             <div class="header-actions">
                                 <a class="custom-button" href="">Start Now</a>
-                                <a class="animated-button" href="">
+                                <a class="animated-button" data-bs-toggle="offcanvas" href="#offcanvasExample"
+                                    role="button" aria-controls="offcanvasExample">
                                     <i class="bi bi-play-fill "></i>
                                     <div class="spinner"></div>
                                 </a>
@@ -208,7 +222,7 @@
 
             <section class="main-section about-us1">
                 <div class="row">
-                    <div class="col wow fadeInUpBig" data-wow-offset="500">
+                    <div class="col wow fadeInUpBig" data-wow-offset="400">
                         <span class="mini-title">about us</span>
                         <h2 class="section-title">Lorem ipsum dolor sit amet, consectetur <span
                                 class="highlight">1980.</span></h2>
@@ -275,7 +289,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col wow fadeInUpBig" data-wow-offset="500" data-wow-delay="0.25s">
+                    <div class="col wow fadeInUpBig" data-wow-offset="400" data-wow-delay="0.25s">
                         <div class="single_banner_thumb tilt">
                             <div class="banner_shape">
                                 <div class="banner_shape_inner1 bounce-animate5">
@@ -296,7 +310,6 @@
                                 <div class="banner_shape_inner6 bounce-animate3">
                                     <img src="assets/img/shape1/text3.png" alt="">
                                 </div>
-
                             </div>
                             <div class="single_banner_thumb_inner">
                                 <img src="assets/img/shape1/1.png" alt="">
@@ -403,11 +416,11 @@
 
             <section class="main-section about-us2">
                 <div class="row row-cols-2">
-                    <div class="col wow fadeInUpBig d-flex align-items-center" data-wow-offset="500"
+                    <div class="col wow fadeInUpBig d-flex align-items-center" data-wow-offset="400"
                         data-wow-delay="0.25s">
                         <img class="img-fluid" src="assets/img/shape2.png" alt="">
                     </div>
-                    <div class="col wow fadeInUpBig" data-wow-offset="500">
+                    <div class="col wow fadeInUpBig" data-wow-offset="400">
                         <span class="mini-title">why choose us</span>
                         <h2 class="section-title">
                             Lorem ipsum dolor sit amet <span class="highlight">consectetur</span> dolor.
@@ -459,8 +472,157 @@
         </div>
     </main>
 
+    <footer class="footer">
+        <div class="footer-overlay"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <!-- footer section -->
+                    <section class="footer-subscribe col-12 col-md-8 col-lg-4 wow fadeInUp" data-wow-duration="0.75s">
+                        <img class="img-fluid" src="assets/img/logo-colored.png" alt="">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus facere modi possimus
+                            dignissimos,
+                            aliquam nobis eaque? Voluptatem magnam quisquam rem.
+                        </p>
+                        <form class="footer-subscribe-form" action="">
+                            <label for="subscribe">Subscribe To Our News Letter</label>
+                            <div class="footer-subscribe-form-input-wrapper">
+                                <input name="subscribe" id="subscribe" type="text" placeholder="Email Address">
+                                <a href="#0">Subscribe</a>
+                            </div>
+                            <sub>*We Will Not Share Your Personal Info</sub>
+                        </form>
+                    </section>
+                    <!-- footer section -->
+                    <section class="footer-section col-6 col-lg-2 wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.25s">
+                        <h2>Useful Links</h2>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Google</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Dribbble</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">LinkedIn</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Wikipedia</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- footer section -->
+                    <section class="footer-section col-6 col-lg-2 wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.5s">
+                        <h2>Resources</h2>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Support</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Dashboard</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Drivers</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Projects</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- footer section -->
+                    <section class="footer-section col-12 col-lg-4 wow fadeInUp" data-wow-duration="0.75s" data-wow-delay="0.75s">
+                        <h2>Contact Information</h2>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <i class="fs-4 bi bi-envelope"></i>
+                                <a href="mailto:example@support.com">example@support.com</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="fs-4 bi bi-geo-alt"></i>
+                                <a href="#0">5 Xyz st., Abc, alexandria, egypt.</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="fs-4 bi bi-phone"></i>
+                                <a href="tel:+8633388444">+8633388444</a>
+                            </li>
+                        </ul>
+                        <!-- footer socials -->
+                        <ul class="footer-socials">
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>
+                    © 2023 Created by:
+                    <a class="link" href="https://aminimanesh.ir">AminJP</a>
+                </p>
+                <div>
+                    <a href="#0">Terms of Use</a>
+                    |
+                    <a href="#0">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-slot"></div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
+        data-bs-theme="dark">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+                lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/popper.min.js"></script>
     <script src="assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
     <script src="assets/particles/particles.min.js"></script>
     <script src="assets/js/vanilla-tilt.min.js"></script>

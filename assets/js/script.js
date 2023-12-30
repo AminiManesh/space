@@ -1,4 +1,5 @@
 $(window).on('load', function () {
+    
     $('.counter').counter({
         autoStart: true,
         duration: 1500,
@@ -22,23 +23,28 @@ $(window).on('load', function () {
     });
 });
 
+$(window).on('scroll', function () {
+    
+    navbarCheck();
+    $('.anim').each(function (index, element) {
+        if (isInViewport(this)) {
+            $(this).addClass('animate__animated');
+            $(this).addClass('show');
+            $(this).addClass($(this).attr("animMode"));
+            $(this).addClass($(this).attr("animDuration"));
+            $(this).addClass($(this).attr("animDelay"));
+        }
+    });
+});
+
+$(window).on('resize', function () {
+    
+});
 
 $(document).ready(function () {
+
     particlesJS.load('particles-js', 'assets/particles/particles.json', function () {
         console.log('callback - particles.js config loaded');
-    });
-
-    $(window).on('scroll', function () {
-        navbarCheck();
-        $('.anim').each(function (index, element) {
-            if (isInViewport(this)) {
-                $(this).addClass('animate__animated');
-                $(this).addClass('show');
-                $(this).addClass($(this).attr("animMode"));
-                $(this).addClass($(this).attr("animDuration"));
-                $(this).addClass($(this).attr("animDelay"));
-            }
-        });
     });
 
     VanillaTilt.init(document.querySelectorAll(".tilt"), {

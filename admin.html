@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/bootstrap-5.3.2/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/fancybox/fancybox.css">
+    <link rel="stylesheet" href="assets/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl-carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body class="dark-theme">
+
+    <div class="load-screen">
+        <p class="load-progress counter" data-count-from="0" data-count-from="100"></p>
+    </div>
+
+    <a class="admin-menu-button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <i class="bi bi-list"></i>
+    </a>
+
+    <main class="general-content">
+        <div class="container">
+
+            <div class="load-screen">
+                <p class="load-progress counter" data-count-from="0" data-count-from="100"></p>
+            </div>
+
+            <!-- filter box -->
+            <form class="filter" action="" method="get">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 h-100">
+                    <div class="col filter-section">
+                        <h3 class="filter-section-title">Roles</h3>
+                        <div class="filter-section-box">
+                            <div class="filter-section-has">
+                                <!-- radio button -->
+                                <div class="check-input-wrapper">
+                                    <label for="norole">No Role</label>
+                                    <input type="radio" name="roles" id="norole" onchange="showFilter(this, 'no')"
+                                        checked>
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- radio button -->
+                                <div class="check-input-wrapper">
+                                    <label for="hasrole">Has Role</label>
+                                    <input type="radio" name="roles" id="hasrole" onchange="showFilter(this, 'has')">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- radio button -->
+                                <div class="check-input-wrapper">
+                                    <label for="allrole">All Roles</label>
+                                    <input type="radio" name="roles" id="allrole" onchange="showFilter(this, 'all')">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="filter-section-which">
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="isManager">Manager</label>
+                                    <input type="checkbox" name="roles" id="isManager">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="isProgrammer">Programmer</label>
+                                    <input type="checkbox" name="roles" id="isProgrammer">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="isBookkeeper">Bookkeeper</label>
+                                    <input type="checkbox" name="roles" id="isBookkeeper">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="isViewer">Viewer</label>
+                                    <input type="checkbox" name="roles" id="isViewer">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="isUser1">User Lv.1</label>
+                                    <input type="checkbox" name="roles" id="isUser1">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col filter-section">
+                        <h3 class="filter-section-title">Users</h3>
+                        <div class="filter-section-box">
+                            <div class="filter-section-has">
+                                <!-- radio button -->
+                                <div class="check-input-wrapper">
+                                    <label for="nouser">No User</label>
+                                    <input type="radio" name="users" id="nouser" onchange="showFilter(this, 'no')"
+                                        checked>
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- radio button -->
+                                <div class="check-input-wrapper">
+                                    <label for="hasuser">Has User</label>
+                                    <input type="radio" name="users" id="hasuser" onchange="showFilter(this, 'has')">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- radio button -->
+                                <div class="check-input-wrapper">
+                                    <label for="alluser">All Users</label>
+                                    <input type="radio" name="users" id="alluser" onchange="showFilter(this, 'all')">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="filter-section-which">
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId1">User 1</label>
+                                    <input type="checkbox" name="selectedUsers" id="userId1">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId2">User 2</label>
+                                    <input type="checkbox" name="selectedUsers" id="userId2">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId3">User 3</label>
+                                    <input type="checkbox" name="selectedUsers" id="userId3">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId4">User 4</label>
+                                    <input type="checkbox" name="selectedUsers" id="userId4">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId5">User 5</label>
+                                    <input type="checkbox" name="roles" id="userId5">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col filter-section">
+                        <h3 class="filter-section-title">Menu</h3>
+                        <div class="filter-section-box">
+                            <div class="filter-section-has">
+                                <!-- radio button -->
+                                <div class="check-input-wrapper">
+                                    <label for="nomenu">No Menu</label>
+                                    <input type="radio" name="menus" id="nomenu" onchange="showFilter(this, 'no')"
+                                        checked>
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- radio button -->
+                                <div class="check-input-wrapper">
+                                    <label for="hasmenu">Has Menu</label>
+                                    <input type="radio" name="menus" id="hasmenu" onchange="showFilter(this, 'has')">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- radio button -->
+                                <div class="check-input-wrapper">
+                                    <label for="allmenu">All Menus</label>
+                                    <input type="radio" name="menus" id="allmenu" onchange="showFilter(this, 'all')">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="filter-section-which">
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="innerMenu">Inner Menu</label>
+                                    <input type="checkbox" name="selectedMenus" id="innerMenu">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="vertcialMenu">Vertical Menu</label>
+                                    <input type="checkbox" name="selectedMenus" id="vertcialMenu">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="bottomMenu">Bottom Menu</label>
+                                    <input type="checkbox" name="selectedMenus" id="bottomMenu">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col filter-section">
+                        <div class="filter-input-wrapper">
+                            <label for="selectedCategory">Category: </label>
+                            <select name="selectedCategory" id="selectedCategory">
+                                <option value="0">Category 1</option>
+                                <option value="0">Category 2</option>
+                                <option value="0">Category 3</option>
+                                <option value="0">Category 4</option>
+                            </select>
+                        </div>
+                        <div class="filter-input-wrapper">
+                            <label for="filterSearch">Search: </label>
+                            <input name="filterSearch" id="filterSearch" type="text" placeholder="Search...">
+                        </div>
+                        <div class="filter-section-which d-block">
+                            <!-- chechbox -->
+                            <div class="check-input-wrapper">
+                                <label for="unread">Unread Message</label>
+                                <input type="checkbox" name="unread" id="unread">
+                                <span class="check-input-tick">
+                                    <span class="check-input-tick-inner">
+                                        <i class="bi bi-check vertical-center"></i>
+                                    </span>
+                                </span>
+                            </div>
+                            <!-- chechbox -->
+                            <div class="check-input-wrapper">
+                                <label for="disabled">Disabled Message</label>
+                                <input type="checkbox" name="disabled" id="disabled">
+                                <span class="check-input-tick">
+                                    <span class="check-input-tick-inner">
+                                        <i class="bi bi-check vertical-center"></i>
+                                    </span>
+                                </span>
+                            </div>
+                            <!-- chechbox -->
+                            <div class="check-input-wrapper">
+                                <label for="favorite">Favorite Message</label>
+                                <input type="checkbox" name="favorite" id="favorite">
+                                <span class="check-input-tick">
+                                    <span class="check-input-tick-inner">
+                                        <i class="bi bi-check vertical-center"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <input class="filter-button" type="submit" value="Filter">
+                    </div>
+                </div>
+            </form>
+
+            <div class="selected-filters">
+            </div>
+
+            <section class="posts">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <div class="post-statuses" title="Message">
+                                    <div class="message post-status">
+                                        <i class="bi bi-envelope text-success"></i>
+                                        <i class="bi bi-envelope-open text-danger"></i>
+                                    </div>
+                                    <div class="permission post-status" title="Permission">
+                                        <i class="bi bi-unlock text-success"></i>
+                                        <i class="bi bi-lock text-danger"></i>
+                                    </div>
+                                    <div class="visible post-status" title="Visibility">
+                                        <i class="bi bi-eye text-success"></i>
+                                        <i class="bi bi-eye-slash text-danger"></i>
+                                    </div>
+                                    <div class="attachment post-status" title="Attachment">
+                                        <i class="bi bi-paperclip text-success"></i>
+                                        <i class="bi bi-paperclip text-danger"></i>
+                                    </div>
+                                    <div class="priority post-status" title="Priority">
+                                        <i class="bi bi-list-ol text-success"></i>
+                                        <i class="bi bi-list-ol text-danger"></i>
+                                    </div>
+                                    <div class="menu post-status" title="Menu">
+                                        <i class="bi bi-menu-button-wide text-success"></i>
+                                        <i class="bi bi-menu-button-wide text-danger"></i>
+                                    </div>
+                                    <div class="referral post-status" title="Referral">
+                                        <i class="bi bi-person-check text-success"></i>
+                                        <i class="bi bi-person-x text-danger"></i>
+                                    </div>
+                                    <div class="tags post-status" title="Tags">
+                                        <i class="bi bi-tags text-success"></i>
+                                        <i class="bi bi-tags text-danger"></i>
+                                    </div>
+                                </div>
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
+        data-bs-theme="dark">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+                lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+    <script src="assets/particles/particles.min.js"></script>
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <script src="assets/js/counter.min.js"></script>
+    <script src="assets/fancybox/fancybox.umd.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var timesList = ["0.25s", "0.5s", "0.75s", "1s"];
+
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplayTimeout: 1500,
+                dot: true,
+                smartSpeed: 1000
+            });
+
+            $('.post-card').each(function (index, element) {
+                var delay = timesList[Math.floor(Math.random() * 4)];
+                $(this).attr("data-wow-delay", delay);
+            });
+
+            $('.owl-carousel').hover(function () {
+                $(this).trigger('play.owl.autoplay');
+            }, function () {
+                $(this).trigger('stop.owl.autoplay');
+            });
+        });
+    </script>
+</body>
+
+</html>

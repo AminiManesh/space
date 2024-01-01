@@ -36,6 +36,8 @@
     --mid-blue: #0c5adb;
     --high-blue: #042143;
     --white: #fff;
+    --main-green: #2ED573;
+    --main-red: #F43F5E;
 }
 
 html {
@@ -162,6 +164,8 @@ ul {
     display: flex;
     justify-content: center;
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     background: var(--light-blue);

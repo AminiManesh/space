@@ -393,36 +393,44 @@
                             </div>
                             <!-- post body -->
                             <div class="post-body">
-                                <div class="post-statuses" title="Message">
-                                    <div class="message post-status">
+                                <div class="post-statuses">
+                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
+                                        data-bs-target="#status-modal">
                                         <i class="bi bi-envelope text-success"></i>
                                         <i class="bi bi-envelope-open text-danger"></i>
                                     </div>
-                                    <div class="permission post-status" title="Permission">
+                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
+                                        data-bs-target="#status-modal">
                                         <i class="bi bi-unlock text-success"></i>
                                         <i class="bi bi-lock text-danger"></i>
                                     </div>
-                                    <div class="visible post-status" title="Visibility">
+                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
+                                        data-bs-target="#status-modal">
                                         <i class="bi bi-eye text-success"></i>
                                         <i class="bi bi-eye-slash text-danger"></i>
                                     </div>
-                                    <div class="attachment post-status" title="Attachment">
+                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
+                                        data-bs-target="#status-modal">
                                         <i class="bi bi-paperclip text-success"></i>
                                         <i class="bi bi-paperclip text-danger"></i>
                                     </div>
-                                    <div class="priority post-status" title="Priority">
+                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
+                                        data-bs-target="#status-modal">
                                         <i class="bi bi-list-ol text-success"></i>
                                         <i class="bi bi-list-ol text-danger"></i>
                                     </div>
-                                    <div class="menu post-status" title="Menu">
+                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
+                                        data-bs-target="#status-modal">
                                         <i class="bi bi-menu-button-wide text-success"></i>
                                         <i class="bi bi-menu-button-wide text-danger"></i>
                                     </div>
-                                    <div class="referral post-status" title="Referral">
+                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
+                                        data-bs-target="#status-modal">
                                         <i class="bi bi-person-check text-success"></i>
                                         <i class="bi bi-person-x text-danger"></i>
                                     </div>
-                                    <div class="tags post-status" title="Tags">
+                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
+                                        data-bs-target="#status-modal">
                                         <i class="bi bi-tags text-success"></i>
                                         <i class="bi bi-tags text-danger"></i>
                                     </div>
@@ -436,6 +444,25 @@
 
         </div>
     </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="status-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close d-block w-auto mx-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
         data-bs-theme="dark">

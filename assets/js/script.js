@@ -104,6 +104,8 @@ function showFilter(e, mode) {
         case "all":
             $(target).slideDown(300);
             $(target.find('input')).each(function (index, element) {
+                var dataConnect = this.id;
+                removeSelectedFilter(dataConnect)
                 this.checked = true;
                 var event = new Event('change');
                 this.dispatchEvent(event);

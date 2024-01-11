@@ -36,8 +36,8 @@
 
             <!-- filter box -->
             <form class="filter" action="" method="get">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 h-100">
-                    <div class="col filter-section">
+                <div class="border-wrapper">
+                    <div class="filter-section">
                         <h3 class="filter-section-title">Roles</h3>
                         <div class="filter-section-box">
                             <div class="filter-section-has">
@@ -127,7 +127,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col filter-section">
+                    <div class="filter-section">
                         <h3 class="filter-section-title">Users</h3>
                         <div class="filter-section-box">
                             <div class="filter-section-has">
@@ -207,7 +207,57 @@
                                 <!-- chechbox -->
                                 <div class="check-input-wrapper">
                                     <label for="userId5">User 5</label>
-                                    <input type="checkbox" name="roles" id="userId5">
+                                    <input type="checkbox" name="selectedUsers" id="userId5">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId5">User 5</label>
+                                    <input type="checkbox" name="selectedUsers" id="userId5">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId5">User 5</label>
+                                    <input type="checkbox" name="selectedUsers" id="userId5">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId5">User 5</label>
+                                    <input type="checkbox" name="selectedUsers" id="userId5">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId5">User 5</label>
+                                    <input type="checkbox" name="selectedUsers" id="userId5">
+                                    <span class="check-input-tick">
+                                        <span class="check-input-tick-inner">
+                                            <i class="bi bi-check vertical-center"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <!-- chechbox -->
+                                <div class="check-input-wrapper">
+                                    <label for="userId5">User 5</label>
+                                    <input type="checkbox" name="selectedUsers" id="userId5">
                                     <span class="check-input-tick">
                                         <span class="check-input-tick-inner">
                                             <i class="bi bi-check vertical-center"></i>
@@ -217,15 +267,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col filter-section">
+                </div>
+                <div class="border-wrapper full border-0">
+                    <div class="filter-section">
                         <h3 class="filter-section-title">Menu</h3>
                         <div class="filter-section-box">
                             <div class="filter-section-has">
                                 <!-- radio button -->
                                 <div class="check-input-wrapper">
                                     <label for="nomenu">No Menu</label>
-                                    <input type="radio" name="menus" id="nomenu" onchange="showFilter(this, 'no')"
-                                        checked>
+                                    <input type="radio" name="menus" id="nomenu" onchange="showFilter(this, 'no')" checked>
                                     <span class="check-input-tick">
                                         <span class="check-input-tick-inner">
                                             <i class="bi bi-check vertical-center"></i>
@@ -287,7 +338,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col filter-section">
+                    <div class="filter-section full">
                         <div class="filter-input-wrapper">
                             <label for="selectedCategory">Category: </label>
                             <select name="selectedCategory" id="selectedCategory">
@@ -304,8 +355,8 @@
                         <div class="filter-section-which d-block">
                             <!-- chechbox -->
                             <div class="check-input-wrapper">
-                                <label for="unread">Unread Message</label>
-                                <input type="checkbox" name="unread" id="unread">
+                                <label for="unread">Unread Message <span class="message-count">(8)</span></label>
+                                <input type="checkbox" name="selectedMessages" id="unread">
                                 <span class="check-input-tick">
                                     <span class="check-input-tick-inner">
                                         <i class="bi bi-check vertical-center"></i>
@@ -314,8 +365,8 @@
                             </div>
                             <!-- chechbox -->
                             <div class="check-input-wrapper">
-                                <label for="disabled">Disabled Message</label>
-                                <input type="checkbox" name="disabled" id="disabled">
+                                <label for="disabled">Disabled Message <span class="message-count">(1)</span></label>
+                                <input type="checkbox" name="selectedMessages" id="disabled">
                                 <span class="check-input-tick">
                                     <span class="check-input-tick-inner">
                                         <i class="bi bi-check vertical-center"></i>
@@ -324,8 +375,8 @@
                             </div>
                             <!-- chechbox -->
                             <div class="check-input-wrapper">
-                                <label for="favorite">Favorite Message</label>
-                                <input type="checkbox" name="favorite" id="favorite">
+                                <label for="favorite">Favorite Message <span class="message-count">(4)</span></label>
+                                <input type="checkbox" name="selectedMessages" id="favorite">
                                 <span class="check-input-tick">
                                     <span class="check-input-tick-inner">
                                         <i class="bi bi-check vertical-center"></i>
@@ -339,6 +390,14 @@
             </form>
 
             <div class="selected-filters">
+
+                <div class="search-in-filters-wrapper">
+                    <input class="search-in-filters" onkeyup="searchInFilters(this.value)" type="text" placeholder="Filter +">
+                    <div class="search-in-filters-dropdown">
+                        <ul class="search-in-filters-dropdown-list">
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <section class="posts">
@@ -1598,12 +1657,14 @@
     </main>
 
     <!-- Modal -->
-    <div class="modal fade" id="status-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="dark">
+    <div class="modal fade" id="status-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-bs-theme="dark">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close d-block w-auto mx-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close d-block w-auto mx-0 me-auto" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     ...

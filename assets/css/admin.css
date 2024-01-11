@@ -13,16 +13,39 @@
 }
 
 .filter {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
     margin-top: 20px;
     width: 100%;
     border-radius: 10px;
     height: fit-content;
-    padding: 25px 25px;
+    padding: 20px;
     background: var(--high-blue);
+}
+
+.border-wrapper {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+    border: 1px solid var(--light-blue);
+    border-radius: 10px;
+    padding: 15px;
+
+}
+
+.border-wrapper.full {
+    flex: 1 1 auto;
 }
 
 .filter-section {
     height: 100%;
+}
+
+.filter-section.full {
+    flex: 1 1 auto;
 }
 
 .filter-section-title {
@@ -199,12 +222,60 @@
     transition: box-shadow 0.3s ease;
 }
 
+.selected-filter.roles {
+    background: var(--light-blue);
+}
+
+.selected-filter.selectedMenus {
+    background: var(--main-green);
+}
+
+.selected-filter.selectedMessages {
+    background: var(--main-red);
+}
+
 .selected-filter:hover {
     box-shadow: 0px 0px 10px 0 rgba(9, 175, 244, 0.5);
 }
 
 .selected-filter i {
     margin-left: 5px;
+}
+
+.search-in-filters-wrapper {
+    position: relative;
+}
+
+.search-in-filters {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+}
+
+.search-in-filters-dropdown {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    background: var(--mid-blue);
+    border-radius: 5px;
+}
+
+.search-in-filters-dropdown-list {
+    padding: 10px;
+}
+
+.search-in-filters-dropdown-list-item {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-in-filters-dropdown-list-item:hover {
+    background: var(--light-blue);
+    border-radius: 5px;
 }
 
 /* posts styles */

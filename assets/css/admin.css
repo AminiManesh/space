@@ -207,6 +207,8 @@
     gap: 10px;
     margin-top: 20px;
     background: var(--high-blue);
+    box-shadow: 0 0 25px 0 rgba(90, 153, 255, 0.3);
+    border: 1px solid rgba(9, 174, 244, 0.5);
     padding: 15px 10px;
     border-radius: 10px;
     z-index: 2;
@@ -278,6 +280,95 @@
     border-radius: 5px;
 }
 
+.search-in-filters-dropdown-unavailable {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    min-width: 300px;
+    background: var(--mid-blue);
+    border-radius: 5px;
+}
+
+/* selected tags */
+.selected-tags {
+    display: flex;
+    position: sticky;
+    top: 10px;
+    left: 50%;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    background: var(--high-blue);
+    box-shadow: 0 0 25px 0 rgba(90, 153, 255, 0.3);
+    border: 1px solid rgba(9, 174, 244, 0.5);
+    padding: 15px 10px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.selected-tag {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    background: var(--mid-blue);
+    padding: 2px 5px 2px 10px;
+    border-radius: 50px;
+    transition: box-shadow 0.3s ease;
+}
+
+.selected-tag:hover {
+    box-shadow: 0px 0px 10px 0 rgba(9, 175, 244, 0.5);
+}
+
+.selected-tag i {
+    margin-left: 5px;
+}
+
+.search-in-tags-wrapper {
+    position: relative;
+}
+
+.search-in-tags {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+}
+
+.search-in-tags-dropdown {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    background: var(--mid-blue);
+    border-radius: 5px;
+}
+
+.search-in-tags-dropdown-list {
+    padding: 10px;
+}
+
+.search-in-tags-dropdown-list-item {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-in-tags-dropdown-list-item:hover {
+    background: var(--light-blue);
+    border-radius: 5px;
+}
+
+.search-in-tags-dropdown-unavailable {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    min-width: 300px;
+    background: var(--mid-blue);
+    border-radius: 5px;
+}
+
 /* posts styles */
 .posts {
     padding: 40px 0;
@@ -292,7 +383,8 @@
 }
 
 .post-card:hover {
-    box-shadow: 0 0 25px 5px rgba(12, 90, 219, 0.3);
+    box-shadow: 0 0 25px 0 rgba(12, 90, 219, 0.3);
+    transform: scale(1.05);
 }
 
 .post-text .post-title {
@@ -339,6 +431,10 @@
     justify-content: space-between;
 }
 
+.post-status {
+    cursor: pointer;
+}
+
 .post-status i {
     display: block;
     font-size: 22px;
@@ -383,4 +479,182 @@
 .post-carousel .owl-dot.active {
     background: var(--light-blue) !important;
     width: 30px;
+}
+
+.priority {
+    padding-top: 5px;
+}
+
+.priority-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21px;
+    height: 21px;
+    border-radius: 5px;
+    color: rgb(25, 135, 84);
+    border: 1px solid rgb(25, 135, 84);
+    cursor: pointer;
+    user-select: none;
+}
+
+.dark-modal {
+    background: rgba(6, 9, 34, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.dark-modal .modal-dialog {}
+
+.dark-modal .modal-content {
+    background: rgba(4, 33, 67, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(9, 174, 244, 0.3);
+}
+
+.dark-modal .modal-header {
+    border: none;
+}
+
+#upload_form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    border: 2px dashed rgba(46, 213, 116, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 200px;
+    margin-bottom: 40px;
+}
+
+#upload_form>i {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    width: fit-content;
+    font-size: 100px;
+}
+
+#upload_form>* {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+}
+
+#upload_form input[type="file"] {
+    display: none;
+}
+
+#upload_form .file-upload-label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.uploaded-file {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 2px dashed rgba(12, 91, 219, 0.5);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+}
+
+.uploaded-file-info {
+    display: flex;
+    gap: 10px;
+}
+
+.uploaded-file-info>img {
+    display: block;
+    border: 1px solid rgba(9, 174, 244, 0.3);
+    border-radius: 5px;
+    width: 100px;
+    max-height: 60px;
+    object-fit: contain !important;
+}
+
+.uploaded-file-info i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+
+.uploaded-file-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.uploaded-file-info-text p {
+    margin: 0;
+}
+
+.uploaded-file-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.uploaded-file-remove {
+    color: var(--main-red);
+    font-size: 30px;
+}
+
+.uploaded-file-download {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+#upload_form progress {
+    -webkit-appearance: none;
+    appearance: none;
+
+    border: 1px solid var(--light-blue);
+    border-radius: 100px;
+    background: transparent;
+    color: transparent;
+    overflow: hidden;
+}
+
+#upload_form progress::-webkit-progress-bar {
+    background: transparent;
+}
+
+#upload_form progress::-webkit-progress-value {
+    background: var(--light-blue);
+}
+
+#upload_form progress::-moz-progress-bar {
+    background: transparent;
+}
+
+#upload_form #status {
+    font-size: 12px;
+}
+
+#upload_form #loaded_n_total {
+    font-size: 12px;
 }

@@ -86,6 +86,27 @@ ul {
     vertical-align: middle;
 }
 
+.button {
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.midblue-button {
+    background: var(--mid-blue);
+    color: var(--white);
+}
+
+.lightblue-button {
+    background: var(--light-blue);
+    color: var(--white);
+}
+
+.block-button {
+    display: block;
+    width: 100%;
+}
+
 .main-section {
     padding: 100px 0;
 }

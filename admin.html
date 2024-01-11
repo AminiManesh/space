@@ -214,56 +214,6 @@
                                         </span>
                                     </span>
                                 </div>
-                                <!-- chechbox -->
-                                <div class="check-input-wrapper">
-                                    <label for="userId5">User 5</label>
-                                    <input type="checkbox" name="selectedUsers" id="userId5">
-                                    <span class="check-input-tick">
-                                        <span class="check-input-tick-inner">
-                                            <i class="bi bi-check vertical-center"></i>
-                                        </span>
-                                    </span>
-                                </div>
-                                <!-- chechbox -->
-                                <div class="check-input-wrapper">
-                                    <label for="userId5">User 5</label>
-                                    <input type="checkbox" name="selectedUsers" id="userId5">
-                                    <span class="check-input-tick">
-                                        <span class="check-input-tick-inner">
-                                            <i class="bi bi-check vertical-center"></i>
-                                        </span>
-                                    </span>
-                                </div>
-                                <!-- chechbox -->
-                                <div class="check-input-wrapper">
-                                    <label for="userId5">User 5</label>
-                                    <input type="checkbox" name="selectedUsers" id="userId5">
-                                    <span class="check-input-tick">
-                                        <span class="check-input-tick-inner">
-                                            <i class="bi bi-check vertical-center"></i>
-                                        </span>
-                                    </span>
-                                </div>
-                                <!-- chechbox -->
-                                <div class="check-input-wrapper">
-                                    <label for="userId5">User 5</label>
-                                    <input type="checkbox" name="selectedUsers" id="userId5">
-                                    <span class="check-input-tick">
-                                        <span class="check-input-tick-inner">
-                                            <i class="bi bi-check vertical-center"></i>
-                                        </span>
-                                    </span>
-                                </div>
-                                <!-- chechbox -->
-                                <div class="check-input-wrapper">
-                                    <label for="userId5">User 5</label>
-                                    <input type="checkbox" name="selectedUsers" id="userId5">
-                                    <span class="check-input-tick">
-                                        <span class="check-input-tick-inner">
-                                            <i class="bi bi-check vertical-center"></i>
-                                        </span>
-                                    </span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -276,7 +226,8 @@
                                 <!-- radio button -->
                                 <div class="check-input-wrapper">
                                     <label for="nomenu">No Menu</label>
-                                    <input type="radio" name="menus" id="nomenu" onchange="showFilter(this, 'no')" checked>
+                                    <input type="radio" name="menus" id="nomenu" onchange="showFilter(this, 'no')"
+                                        checked>
                                     <span class="check-input-tick">
                                         <span class="check-input-tick-inner">
                                             <i class="bi bi-check vertical-center"></i>
@@ -392,10 +343,15 @@
             <div class="selected-filters">
 
                 <div class="search-in-filters-wrapper">
-                    <input class="search-in-filters" onkeyup="searchInFilters(this.value)" type="text" placeholder="Filter +">
+                    <input class="search-in-filters" onkeyup="searchInFilters(this.value)" type="text"
+                        placeholder="Filter +">
                     <div class="search-in-filters-dropdown">
                         <ul class="search-in-filters-dropdown-list">
                         </ul>
+                    </div>
+                    <div class="search-in-filters-dropdown-unavailable">
+                        <p class="mb-2">The searched filter is not available in post filters.</p>
+                        <a class="button lightblue-button block-button" href="#0">Add Filter Request</a>
                     </div>
                 </div>
             </div>
@@ -458,25 +414,21 @@
                                         <i class="bi bi-envelope text-success"></i>
                                         <i class="bi bi-envelope-open text-danger"></i>
                                     </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
+                                    <div class="permission post-status" isOpen="true" title="Permission">
+                                        <i class="bi bi-unlock text-success" id="isPermissionIcon"></i>
+                                        <i class="bi bi-lock text-danger" id="isNotPermissionIcon"></i>
                                     </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
+                                    <div class="visible post-status" isVisible="true" title="Visibility">
+                                        <i class="bi bi-eye text-success" id="isVisibleIcon"></i>
+                                        <i class="bi bi-eye-slash text-danger" id="isNotVisibleIcon"></i>
                                     </div>
                                     <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
+                                        data-bs-target="#attachment-modal">
                                         <i class="bi bi-paperclip text-success"></i>
                                         <i class="bi bi-paperclip text-danger"></i>
                                     </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
+                                    <div class="priority post-status" title="Priority">
+                                        <span class="priority-number">1</span>
                                     </div>
                                     <div class="menu post-status" title="Menu" data-bs-toggle="modal"
                                         data-bs-target="#status-modal">
@@ -485,1163 +437,11 @@
                                     </div>
                                     <div class="referral post-status" title="Referral" data-bs-toggle="modal"
                                         data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
+                                        <i class="bi bi-box-arrow-up-right text-success"></i>
+                                        <i class="bi bi-box-arrow-up-right text-danger"></i>
                                     </div>
                                     <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-tags text-success"></i>
-                                        <i class="bi bi-tags text-danger"></i>
-                                    </div>
-                                </div>
-                                <a class="post-button details" href="#0">Details</a>
-                            </div>
-                        </article>
-                    </div>
-                    <!-- single post -->
-                    <div class="col">
-                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
-                            <!-- post header -->
-                            <div class="post-header">
-                                <div class="post-image">
-                                    <div class="owl-carousel owl-loaded post-carousel">
-                                        <div class="owl-stage-outer">
-                                            <div class="owl-stage">
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                                <div class="owl-item">
-                                                    <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between p-2">
-                                    <div class="post-text">
-                                        <h3 class="post-title">Post Title</h3>
-                                        <p class="post-describe">
-                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                        </p>
-                                    </div>
-                                    <div class="reviews">
-                                        <div class="review likes">
-                                            <span>56</span>
-                                            <i class="bi bi-heart-fill"></i>
-                                        </div>
-                                        <div class="review views">
-                                            <span>121</span>
-                                            <i class="bi bi-eye-fill"></i>
-                                        </div>
-                                        <div class="review comments">
-                                            <span>12</span>
-                                            <i class="bi bi-chat-fill"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- post body -->
-                            <div class="post-body">
-                                <div class="post-statuses">
-                                    <div class="message post-status" title="Message" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
-                                    </div>
-                                    <div class="permission post-status" title="Permission" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-unlock text-success"></i>
-                                        <i class="bi bi-lock text-danger"></i>
-                                    </div>
-                                    <div class="visible post-status" title="Visibility" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-eye text-success"></i>
-                                        <i class="bi bi-eye-slash text-danger"></i>
-                                    </div>
-                                    <div class="attachment post-status" title="Attachment" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-paperclip text-success"></i>
-                                        <i class="bi bi-paperclip text-danger"></i>
-                                    </div>
-                                    <div class="priority post-status" title="Priority" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-list-ol text-success"></i>
-                                        <i class="bi bi-list-ol text-danger"></i>
-                                    </div>
-                                    <div class="menu post-status" title="Menu" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-menu-button-wide text-success"></i>
-                                        <i class="bi bi-menu-button-wide text-danger"></i>
-                                    </div>
-                                    <div class="referral post-status" title="Referral" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
-                                        <i class="bi bi-person-check text-success"></i>
-                                        <i class="bi bi-person-x text-danger"></i>
-                                    </div>
-                                    <div class="tags post-status" title="Tags" data-bs-toggle="modal"
-                                        data-bs-target="#status-modal">
+                                        data-bs-target="#tag-modal">
                                         <i class="bi bi-tags text-success"></i>
                                         <i class="bi bi-tags text-danger"></i>
                                     </div>
@@ -1662,7 +462,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="">Modal title</h1>
                     <button type="button" class="btn-close d-block w-auto mx-0 me-auto" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
@@ -1677,10 +477,70 @@
         </div>
     </div>
 
+    <!-- Attachment Modal -->
+    <div class="modal fade dark-modal" id="attachment-modal" tabindex="-1" aria-labelledby="attachmentModal"
+        aria-hidden="true" data-bs-theme="dark">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="">Post Attachments</h1>
+                    <button type="button" class="btn-close d-block w-auto mx-0 me-auto" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="upload_form" enctype="multipart/form-data" method="post">
+                        <i class="bi bi-cloud-arrow-up-fill text-warning"></i>
+                        <label class="file-upload-label" for="file1">
+                            Upload your file
+                            <input type="file" name="file1" id="file1" onchange="uploadFile()">
+                        </label>
+                        <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+                        <p id="status"></p>
+                        <p id="loaded_n_total"></p>
+                    </form>
+                    <div class="uploaded-files">
+                        <!-- uploaded files will append to here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tags Modal -->
+    <div class="modal fade dark-modal" id="tag-modal" tabindex="-1" aria-labelledby="attachmentModal" aria-hidden="true"
+        data-bs-theme="dark">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="">Post Tags</h1>
+                    <button type="button" class="btn-close d-block w-auto mx-0 me-auto" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="selected-tags">
+                        <div class="search-in-tags-wrapper">
+                            <input class="search-in-tags" onkeyup="searchInTags(this.value)" type="text"
+                                placeholder="Tag +">
+                            <div class="search-in-tags-dropdown">
+                                <ul class="search-in-tags-dropdown-list">
+                                </ul>
+                            </div>
+                            <div class="search-in-tags-dropdown-unavailable">
+                                <p class="mb-2">The searched tag is not available in tags.</p>
+                                <a class="button lightblue-button block-button" href="#0">Add Tag Request</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="button midblue-button block-button mt-3" href="#0">Save Tags</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
         data-bs-theme="dark">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <h5 class="offcanvas-title" id="">Menu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
@@ -1712,30 +572,112 @@
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/owl-carousel/owl.carousel.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/admin.js"></script>
     <script>
+        var tags = [];
+        var selectedTags = [];
+        $.ajax({
+            type: "get",
+            url: "assets/js/tagdata.json",
+            dataType: "json",
+            success: function (response) {
+                tags = response;
+                console.log(tags)
+            }
+        });
+
         $(document).ready(function () {
 
-            var timesList = ["0.25s", "0.5s", "0.75s", "1s"];
-
-            $(".owl-carousel").owlCarousel({
-                items: 1,
-                loop: true,
-                autoplayTimeout: 1500,
-                dot: true,
-                smartSpeed: 1000
-            });
-
-            $('.post-card').each(function (index, element) {
-                var delay = timesList[Math.floor(Math.random() * 4)];
-                $(this).attr("data-wow-delay", delay);
-            });
-
-            $('.owl-carousel').hover(function () {
-                $(this).trigger('play.owl.autoplay');
-            }, function () {
-                $(this).trigger('stop.owl.autoplay');
-            });
         });
+
+        function isTagAdded(tag) {
+            var result = false;
+            for (i = 0; i < selectedTags.length; i++) {
+                txtValue = selectedTags[i];
+                if (txtValue.toUpperCase().indexOf(tag.toUpperCase()) > -1) {
+                    result = true;
+                }
+            }
+            return result;
+        }
+
+        function selectATag(tag) {
+            if (!isTagAdded(tag)) {
+                var selectedTag = document.createElement('span');
+                $(selectedTag).addClass('selected-tag');
+
+                var selectedTagText = document.createElement('span');
+                $(selectedTagText).addClass('selected-tag-text');
+
+                var selectedTagIcon = document.createElement('span');
+                $(selectedTagIcon).addClass('bi');
+                $(selectedTagIcon).addClass('bi-x');
+                $(selectedTagIcon).addClass('vertical-center');
+
+                $(selectedTag).append(selectedTagText);
+                $(selectedTag).append(selectedTagIcon);
+
+                $(selectedTagText).text(tag + " ");
+                selectedTag.addEventListener('click', function () {
+                    removeATag(tag);
+                });
+
+                $('.selected-tags').prepend(selectedTag);
+                selectedTags.push(tag);
+                console.log(selectedTags);
+            }
+        }
+
+        function removeATag(tag) {
+            selectedTags.pop(tag);
+            $('.selected-tags').find('.selected-tag:contains("'+ tag +'")').remove();
+            console.log(selectedTags);
+        }
+
+        function searchInTags(inputValue) {
+
+            if (inputValue) {
+                $('.search-in-tags-dropdown').fadeIn(300);
+            } else {
+                $('.search-in-tags-dropdown').fadeOut(300);
+            }
+
+            tag = inputValue.toUpperCase();
+
+            var isThereAnyItem = false;
+
+            $('.search-in-tags-dropdown-list').html('');
+
+            for (i = 0; i < tags.length; i++) {
+                txtValue = tags[i];
+                if (txtValue.toUpperCase().indexOf(tag) > -1) {
+                    isThereAnyItem = true;
+                    var tagItem = document.createElement('li');
+                    $(tagItem).addClass('search-in-tags-dropdown-list-item');
+                    $(tagItem).text(txtValue);
+                    tagItem.addEventListener('click', function () {
+                        selectATag(this.innerHTML);
+                        var input = $('input.search-in-tags')[0];
+                        $(input).val('');
+                        var event = new Event('keyup');
+                        input.dispatchEvent(event);
+                    });
+                    $('.search-in-tags-dropdown-list').append(tagItem);
+                } else {
+                    // tags[i].style.display = "none";
+                }
+            }
+
+            // if find item its will show it on list. if dont find any item its will show another dropwdown.
+            if (!isThereAnyItem) {
+                $('.search-in-tags-dropdown-unavailable').show();
+                $('.search-in-tags-dropdown').hide();
+            } else {
+                $('.search-in-tags-dropdown-unavailable').hide();
+                $('.search-in-tags-dropdown').show();
+            }
+
+        }
     </script>
 </body>
 

@@ -1,3 +1,103 @@
+var tags = [];
+var selectedTags = [];
+$.ajax({
+    type: "get",
+    url: "assets/js/tagdata.json",
+    dataType: "json",
+    success: function (response) {
+        tags = response;
+        console.log(tags)
+    }
+});
+
+function isTagAdded(tag) {
+    var result = false;
+    for (i = 0; i < selectedTags.length; i++) {
+        txtValue = selectedTags[i];
+        if (txtValue.toUpperCase().indexOf(tag.toUpperCase()) > -1) {
+            result = true;
+        }
+    }
+    return result;
+}
+
+function selectATag(tag) {
+    if (!isTagAdded(tag)) {
+        var selectedTag = document.createElement('span');
+        $(selectedTag).addClass('selected-tag');
+
+        var selectedTagText = document.createElement('span');
+        $(selectedTagText).addClass('selected-tag-text');
+
+        var selectedTagIcon = document.createElement('span');
+        $(selectedTagIcon).addClass('bi');
+        $(selectedTagIcon).addClass('bi-x');
+        $(selectedTagIcon).addClass('vertical-center');
+
+        $(selectedTag).append(selectedTagText);
+        $(selectedTag).append(selectedTagIcon);
+
+        $(selectedTagText).text(tag + " ");
+        selectedTag.addEventListener('click', function () {
+            removeATag(tag);
+        });
+
+        $('.selected-tags').prepend(selectedTag);
+        selectedTags.push(tag);
+        console.log(selectedTags);
+    }
+}
+
+function removeATag(tag) {
+    selectedTags.pop(tag);
+    $('.selected-tags').find('.selected-tag:contains("'+ tag +'")').remove();
+    console.log(selectedTags);
+}
+
+function searchInTags(inputValue) {
+
+    if (inputValue) {
+        $('.search-in-tags-dropdown').fadeIn(300);
+    } else {
+        $('.search-in-tags-dropdown').fadeOut(300);
+    }
+
+    tag = inputValue.toUpperCase();
+
+    var isThereAnyItem = false;
+
+    $('.search-in-tags-dropdown-list').html('');
+
+    for (i = 0; i < tags.length; i++) {
+        txtValue = tags[i];
+        if (txtValue.toUpperCase().indexOf(tag) > -1) {
+            isThereAnyItem = true;
+            var tagItem = document.createElement('li');
+            $(tagItem).addClass('search-in-tags-dropdown-list-item');
+            $(tagItem).text(txtValue);
+            tagItem.addEventListener('click', function () {
+                selectATag(this.innerHTML);
+                var input = $('input.search-in-tags')[0];
+                $(input).val('');
+                var event = new Event('keyup');
+                input.dispatchEvent(event);
+            });
+            $('.search-in-tags-dropdown-list').append(tagItem);
+        } else {
+            // tags[i].style.display = "none";
+        }
+    }
+
+    // if find item its will show it on list. if dont find any item its will show another dropwdown.
+    if (!isThereAnyItem) {
+        $('.search-in-tags-dropdown-unavailable').show();
+        $('.search-in-tags-dropdown').hide();
+    } else {
+        $('.search-in-tags-dropdown-unavailable').hide();
+        $('.search-in-tags-dropdown').show();
+    }
+}
+
 // get all filter checkboxes added in filter form
 var allFilters = $('input[type="checkbox"]');
 
@@ -69,19 +169,19 @@ $(document).ready(function () {
         }
     });
 
-    // Toggle lock icon of posts according to isOpen attribute of permission icon wrapper at load time.
-    $('.permission').each(function (index, element) {
-        var isOpen = $(this).attr('isOpen');
-        var isPermissionIcon = $(this).find('#isPermissionIcon');
-        var isNotPermissionIcon = $(this).find('#isNotPermissionIcon');
-        if (isOpen) {
-            $(isPermissionIcon).show();
-            $(isNotPermissionIcon).hide();
-        } else {
-            $(isPermissionIcon).hide();
-            $(isNotPermissionIcon).show();
-        }
-    });
+    // // Toggle lock icon of posts according to isOpen attribute of permission icon wrapper at load time.
+    // $('.permission').each(function (index, element) {
+    //     var isOpen = $(this).attr('isOpen');
+    //     var isPermissionIcon = $(this).find('#isPermissionIcon');
+    //     var isNotPermissionIcon = $(this).find('#isNotPermissionIcon');
+    //     if (isOpen) {
+    //         $(isPermissionIcon).show();
+    //         $(isNotPermissionIcon).hide();
+    //     } else {
+    //         $(isPermissionIcon).hide();
+    //         $(isNotPermissionIcon).show();
+    //     }
+    // });
 
     // Change visibility of post
     $('.visible').click(function (e) {
@@ -123,43 +223,43 @@ $(document).ready(function () {
     });
 
     // Change visibility of post
-    $('.permission').click(function (e) {
-        e.preventDefault();
-        var permissionIcon = $(this).find('#isPermissionIcon');
-        var notPermissionIcon = $(this).find('#isNotPermissionIcon');
+    // $('.permission').click(function (e) {
+    //     e.preventDefault();
+    //     var permissionIcon = $(this).find('#isPermissionIcon');
+    //     var notPermissionIcon = $(this).find('#isNotPermissionIcon');
 
-        var isOpen = $(this).attr('isOpen');
+    //     var isOpen = $(this).attr('isOpen');
 
-        if (isOpen === "true") {
-            // Ajax Here
-            $.ajax({
-                type: "method",
-                url: "url",
-                data: "data",
-                dataType: "dataType",
-                success: function (response) {
-                    // set to false
-                }
-            });
-            $(permissionIcon).hide();
-            $(notPermissionIcon).show();
-            $(this).attr('isOpen', false);
-        } else if (isOpen === "false") {
-            // Ajax Here
-            $.ajax({
-                type: "method",
-                url: "url",
-                data: "data",
-                dataType: "dataType",
-                success: function (response) {
-                    // set to true
-                }
-            });
-            $(permissionIcon).show();
-            $(notPermissionIcon).hide();
-            $(this).attr('isOpen', true);
-        }
-    });
+    //     if (isOpen === "true") {
+    //         // Ajax Here
+    //         $.ajax({
+    //             type: "method",
+    //             url: "url",
+    //             data: "data",
+    //             dataType: "dataType",
+    //             success: function (response) {
+    //                 // set to false
+    //             }
+    //         });
+    //         $(permissionIcon).hide();
+    //         $(notPermissionIcon).show();
+    //         $(this).attr('isOpen', false);
+    //     } else if (isOpen === "false") {
+    //         // Ajax Here
+    //         $.ajax({
+    //             type: "method",
+    //             url: "url",
+    //             data: "data",
+    //             dataType: "dataType",
+    //             success: function (response) {
+    //                 // set to true
+    //             }
+    //         });
+    //         $(permissionIcon).show();
+    //         $(notPermissionIcon).hide();
+    //         $(this).attr('isOpen', true);
+    //     }
+    // });
 
     // post priority change
     $('.priority-number').click(function (e) {

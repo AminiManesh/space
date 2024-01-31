@@ -58,6 +58,22 @@ $(document).ready(async function () {
         // options
     });
 
+    $('.canvas-item.parent a').click(function (e) {
+        var target = $(this).parent().find('.canvas-menu.child')[0];
+        $(target).slideToggle();
+        $('.canvas-menu.child').each(function (index, element) {
+            if (!target.isEqualNode(element)) {
+                $(element).slideUp();
+            }
+        });
+    });
+
+    // switching language
+    $('.switch-lang').click(function (e) { 
+        $(this).toggleClass('changed');
+        // switch language api
+    });
+
     await delay(1500);
     new WOW().init();
 });
@@ -65,8 +81,12 @@ $(document).ready(async function () {
 function navbarCheck() {
     if ($(window).scrollTop() >= 20) {
         $('.navbar').addClass('active');
+        $('.canvas-float-btn').css('top', '15px');
+        $('.canvas-float-btn').css('left', '15px');
     } else if ($(window).scrollTop() === 0) {
         $('.navbar').removeClass('active');
+        $('.canvas-float-btn').css('top', '30px');
+        $('.canvas-float-btn').css('left', '30px');
     }
 }
 

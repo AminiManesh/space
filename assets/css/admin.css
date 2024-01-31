@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     top: 0;
-    right: 0;
+    left: 0;
     width: 50px;
     height: 50px;
     background: var(--high-blue);
@@ -246,6 +246,7 @@
 
 .search-in-filters-wrapper {
     position: relative;
+    flex: 1 1 auto;
 }
 
 .search-in-filters {
@@ -253,6 +254,7 @@
     border: none;
     outline: none;
     color: var(--white);
+    width: 100%;
 }
 
 .search-in-filters-dropdown {
@@ -379,12 +381,12 @@
     border-radius: 10px;
     overflow: hidden;
     background: var(--high-blue);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .post-card:hover {
     box-shadow: 0 0 25px 0 rgba(12, 90, 219, 0.3);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .post-text .post-title {
@@ -496,27 +498,6 @@
     border: 1px solid rgb(25, 135, 84);
     cursor: pointer;
     user-select: none;
-}
-
-.dark-modal {
-    background: rgba(6, 9, 34, 0.5);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-.dark-modal .modal-content {
-    background: rgba(4, 33, 67, 0.5);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(11px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(9, 174, 244, 0.3);
-}
-
-.dark-modal .modal-header {
-    border: none;
 }
 
 #upload_form {

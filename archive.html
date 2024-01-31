@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/bootstrap-5.3.2/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/fancybox/fancybox.css">
+    <link rel="stylesheet" href="assets/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owl-carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/archive.css">
+</head>
+
+<body class="dark-theme">
+
+    <div class="load-screen">
+        <p class="load-progress counter" data-count-from="0" data-count-from="100"></p>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">
+                <a href="/">
+                    <img class="img-fluid" src="assets/img/Logo-Borna2.png" alt="borna data processing">
+                </a>
+            </h1>
+
+            <ul class="navbar-items">
+                <li class="navbar-item">
+                    <a href="#0">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#0">About Us</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#0">Blog</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#0">Contact</a>
+                </li>
+            </ul>
+
+            <button class="search-action" data-bs-toggle="modal" data-bs-target="#search-modal">
+                <i class="bi bi-search"></i>
+            </button>
+
+            <div class="account-actions">
+                <a class="account-signin" href="#0">
+                    Sign In
+                </a>
+                <a class="account-signup" href="#0">
+                    Sign up
+                </a>
+            </div>
+            <div class="switch-lang">
+                <span class="switch-lang-ball"></span>
+                <div class="switch-langs">
+                    <div class="switch-lang-item">En</div>
+                    <div class="switch-lang-item">Fa</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="general-content">
+        <div class="container">
+
+            <div class="load-screen">
+                <p class="load-progress counter" data-count-from="0" data-count-from="100"></p>
+            </div>
+
+            <!-- filter box -->
+            <form class="filter" action="" method="get">
+
+                <div class="d-none">
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="isManager">Manager</label>
+                        <input type="checkbox" name="roles" id="isManager">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="isProgrammer">Programmer</label>
+                        <input type="checkbox" name="roles" id="isProgrammer">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="isBookkeeper">Bookkeeper</label>
+                        <input type="checkbox" name="roles" id="isBookkeeper">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="isViewer">Viewer</label>
+                        <input type="checkbox" name="roles" id="isViewer">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="isUser1">User Lv.1</label>
+                        <input type="checkbox" name="roles" id="isUser1">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="userId1">User 1</label>
+                        <input type="checkbox" name="selectedUsers" id="userId1">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="userId2">User 2</label>
+                        <input type="checkbox" name="selectedUsers" id="userId2">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="userId3">User 3</label>
+                        <input type="checkbox" name="selectedUsers" id="userId3">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="userId4">User 4</label>
+                        <input type="checkbox" name="selectedUsers" id="userId4">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="userId5">User 5</label>
+                        <input type="checkbox" name="selectedUsers" id="userId5">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="innerMenu">Inner Menu</label>
+                        <input type="checkbox" name="selectedMenus" id="innerMenu">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="vertcialMenu">Vertical Menu</label>
+                        <input type="checkbox" name="selectedMenus" id="vertcialMenu">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="bottomMenu">Bottom Menu</label>
+                        <input type="checkbox" name="selectedMenus" id="bottomMenu">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="unread">Unread Message <span class="message-count">(8)</span></label>
+                        <input type="checkbox" name="selectedMessages" id="unread">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="disabled">Disabled Message <span class="message-count">(1)</span></label>
+                        <input type="checkbox" name="selectedMessages" id="disabled">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                    <!-- chechbox -->
+                    <div class="check-input-wrapper">
+                        <label for="favorite">Favorite Message <span class="message-count">(4)</span></label>
+                        <input type="checkbox" name="selectedMessages" id="favorite">
+                        <span class="check-input-tick">
+                            <span class="check-input-tick-inner">
+                                <i class="bi bi-check vertical-center"></i>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="selected-filters">
+
+                    <div class="search-in-filters-wrapper">
+                        <input class="search-in-filters" onkeyup="searchInFilters(this.value)" type="text"
+                            placeholder="Filter +">
+                        <div class="search-in-filters-dropdown">
+                            <ul class="search-in-filters-dropdown-list">
+                            </ul>
+                        </div>
+                        <div class="search-in-filters-dropdown-unavailable">
+                            <p class="mb-2">The searched filter is not available in post filters.</p>
+                            <a class="button lightblue-button block-button" href="#0">Add Filter Request</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-section full">
+                    <div class="filter-input-wrapper">
+                        <select name="selectedCategory" id="selectedCategory">
+                            <option value="0">Category 1</option>
+                            <option value="0">Category 2</option>
+                            <option value="0">Category 3</option>
+                            <option value="0">Category 4</option>
+                        </select>
+                    </div>
+                    <div class="filter-input-wrapper">
+                        <input name="filterSearch" id="filterSearch" type="text" placeholder="Search...">
+                    </div>
+                </div>
+            </form>
+
+            <section class="posts">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                    <!-- single post -->
+                    <div class="col">
+                        <article class="post-card wow fadeInUp" data-wow-offset="200" data-wow-duration="1s">
+                            <!-- post header -->
+                            <div class="post-header">
+                                <div class="post-image">
+                                    <div class="owl-carousel owl-loaded post-carousel">
+                                        <div class="owl-stage-outer">
+                                            <div class="owl-stage">
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                                <div class="owl-item">
+                                                    <img class="img-fluid" src="assets/img/landing-back.png"
+                                                        alt="Lorem ipsum dolor.">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between p-2">
+                                    <div class="post-text">
+                                        <h3 class="post-title">Post Title</h3>
+                                        <p class="post-describe">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                        </p>
+                                    </div>
+                                    <div class="reviews">
+                                        <div class="review likes">
+                                            <span>56</span>
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div class="review views">
+                                            <span>121</span>
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+                                        <div class="review comments">
+                                            <span>12</span>
+                                            <i class="bi bi-chat-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- post body -->
+                            <div class="post-body">
+                                <a class="post-button details" href="#0">Details</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-overlay"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <!-- footer section -->
+                    <section class="footer-subscribe col-12 col-md-8 col-lg-4 wow fadeInUp" data-wow-duration="0.75s">
+                        <img class="img-fluid footer-logo" src="assets/img/Logo-Borna2.png" alt="borna data processing">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus facere modi possimus
+                            dignissimos,
+                            aliquam nobis eaque? Voluptatem magnam quisquam rem.
+                        </p>
+                        <form class="footer-subscribe-form" action="">
+                            <label for="subscribe">Subscribe To Our News Letter</label>
+                            <div class="footer-subscribe-form-input-wrapper">
+                                <input name="subscribe" id="subscribe" type="text" placeholder="Email Address">
+                                <a href="#0">Subscribe</a>
+                            </div>
+                            <sub>*We Will Not Share Your Personal Info</sub>
+                        </form>
+                    </section>
+                    <!-- footer section -->
+                    <section class="footer-section col-6 col-lg-2 wow fadeInUp" data-wow-duration="0.75s"
+                        data-wow-delay="0.25s">
+                        <h2>Useful Links</h2>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Google</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Dribbble</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">LinkedIn</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Wikipedia</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- footer section -->
+                    <section class="footer-section col-6 col-lg-2 wow fadeInUp" data-wow-duration="0.75s"
+                        data-wow-delay="0.5s">
+                        <h2>Resources</h2>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Support</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Dashboard</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Drivers</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="bi bi-arrow-right"></i>
+                                <a href="#0">Projects</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- footer section -->
+                    <section class="footer-section col-12 col-lg-4 wow fadeInUp" data-wow-duration="0.75s"
+                        data-wow-delay="0.75s">
+                        <h2>Contact Information</h2>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <i class="fs-4 bi bi-envelope"></i>
+                                <a href="mailto:example@support.com">example@support.com</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="fs-4 bi bi-geo-alt"></i>
+                                <a href="#0">5 Xyz st., Abc, alexandria, egypt.</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <i class="fs-4 bi bi-phone"></i>
+                                <a href="tel:+8633388444">+8633388444</a>
+                            </li>
+                        </ul>
+                        <!-- footer socials -->
+                        <ul class="footer-socials">
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>
+                    © <script>document.write(new Date().getFullYear())</script> Created by:
+                    <a class="link" href="https://www.aminimanesh.ir">AminJP</a>
+                </p>
+                <div>
+                    <a href="#0">Terms of Use</a>
+                    |
+                    <a href="#0">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="canvas-float-btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <i class="bi bi-list"></i>
+    </button>
+    <div class="offcanvas offcanvas-end dark-canvas" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel" data-bs-theme="dark">
+
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="canvas-menu">
+                <li class="canvas-item">
+                    <a href="#0">Home</a>
+                </li>
+                <li class="canvas-item parent">
+                    <a href="#0">Pages</a>
+                    <ul class="canvas-menu child">
+                        <li class="canvas-item">
+                            <a href="#0">Child 1</a>
+                        </li>
+                        <li class="canvas-item">
+                            <a href="#0">Child 2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="canvas-item">
+                    <a href="#0">Cart</a>
+                </li>
+                <li class="canvas-item parent">
+                    <a href="#0">Category</a>
+                    <ul class="canvas-menu child">
+                        <li class="canvas-item">
+                            <a href="#0">Child 1</a>
+                        </li>
+                        <li class="canvas-item">
+                            <a href="#0">Child 2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade dark-modal rounded-0" id="search-modal" tabindex="-1" aria-labelledby="" aria-hidden="true"
+        data-bs-theme="dark">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <button type="button" class="btn-close d-block w-auto mx-0 me-auto" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="get" class="w-100 h-100">
+                        <div class="search-modal-input-wrapper">
+                            <input class="search-modal-input" type="text" placeholder="Search...">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/jquery.easing.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/bootstrap-5.3.2/js/bootstrap.min.js"></script>
+    <script src="assets/particles/particles.min.js"></script>
+    <script src="assets/js/vanilla-tilt.min.js"></script>
+    <script src="assets/js/counter.min.js"></script>
+    <script src="assets/fancybox/fancybox.umd.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+
+</html>

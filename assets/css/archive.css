@@ -1,0 +1,31 @@
+.navbar {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+}
+
+.filter {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+    z-index: 2;
+    box-shadow: 0 0 25px 0 rgba(90, 153, 255, 0.3);
+    border: 1px solid rgba(9, 174, 244, 0.5);
+}
+
+.selected-filters {
+    position: relative;
+    top: unset;
+    left: unset;
+    flex: 3;
+    margin: 0;
+    box-shadow: 0 0 5px 0 rgba(90, 153, 255, 0.3);
+}
+
+.filter-section {
+    flex: 1;
+}

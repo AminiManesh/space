@@ -82,6 +82,19 @@ ul {
 }
 
 /* ------ */
+.post-button {
+    display: block;
+    width: 100%;
+    background: var(--mid-blue);
+    color: var(--white);
+    text-align: center;
+    margin: 10px 0;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
 .dark-canvas {
     background: rgba(6, 9, 34, 0.5);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="assets/fancybox/fancybox.css">
     <link rel="stylesheet" href="assets/owl-carousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/owl-carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/post.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body class="dark-theme">
@@ -66,519 +69,827 @@
         </div>
     </nav>
 
-    <div class="header-slot"></div>
-    <header class="header">
-        <div class="header-overlay"></div>
-        <div class="particles-layer" id="particles-js"></div>
-        <div class="container h-100">
-            <div class="header-content">
-                <div class="row">
-                    <div class="col">
-                        <div class="header-text">
-                            <h1 class="page-title">The title of <span class="highlight">page</span> is Here!</h1>
-                            <p class="main-subtitle">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus rerum eos quis
-                                culpa aspernatur at dolor possimus tempore natus?
-                            </p>
-                            <div class="header-actions">
-                                <a class="custom-button" href="">Start Now</a>
-                                <a class="animated-button" href="#0">
-                                    <i class="bi bi-play-fill "></i>
-                                    <div class="spinner"></div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="header-image">
-                            <img class="img-fluid tilt" src="assets/img/illustration-1.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <main class="general-content">
         <div class="container">
-            <section class="main-section services1">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-                        <div class="flipbox mb-30 wow fadeInUp">
-                            <div class="flipbox-font">
-                                <div class="flipbox-inner">
-                                    <div class="flipbox-icon">
-                                        <i class="bi bi-globe "></i>
-                                    </div>
-                                    <div class="flipbox-title">
-                                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    </div>
+            <div class="row">
+                <div class="col col-9">
+                    <div class="post-section first-section">
+                        <div class="post-title">
+                            <h1>Post title ipsum</h1>
+                            <div class="post-statuses">
+                                <div class="post-likes-count">
+                                    <span>56</span>
+                                    <i class="bi bi-heart"></i>
+                                </div>
+                                <div class="post-views-count">
+                                    <span>117</span>
+                                    <i class="bi bi-eye"></i>
+                                </div>
+                                <div class="post-comments-count">
+                                    <span>22</span>
+                                    <i class="bi bi-chat"></i>
                                 </div>
                             </div>
-                            <div class="flipbox-back">
-                                <div class="flipbox-inner">
-                                    <div class="flipbox-title">
-                                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    </div>
-                                    <div class="flipbox-desc">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-                                            molestiae
-                                        </p>
-                                    </div>
-                                    <div class="flipbox-actions">
-                                        <a class="custom-button custom-button-sm" href="https://www.youtube.com/">Start
-                                            Now</a>
-                                        <a class="animated-button animated-button-sm" href="assets/video/example.mp4"
-                                            data-fancybox data-caption="example video">
-                                            <i class="bi bi-play-fill "></i>
-                                            <div class="spinner"></div>
+                            <div class="like-post" data-is-liked="true" onclick="changeLike(this)">
+                                <i class="bi bi-heart"></i>
+                                <span>Like</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="images-wrapper">
+                                    <ul class="other-images">
+                                        <li class="other-images-item">
+                                            <img class="img-fluid selected" src="assets/img/post1/07.jpg" alt=""
+                                                data-fancybox="gallery-a" data-caption="img 1">
+                                        </li>
+                                        <li class="other-images-item">
+                                            <img class="img-fluid" src="assets/img/post1/1680x1050 (25).jpg" alt=""
+                                                data-fancybox="gallery-a" data-caption="img 2">
+                                        </li>
+                                        <li class="other-images-item">
+                                            <img class="img-fluid" src="assets/img/post1/1920x1440 (25).jpg" alt=""
+                                                data-fancybox="gallery-a" data-caption="img 3">
+                                        </li>
+                                        <li class="other-images-item">
+                                            <img class="img-fluid" src="assets/img/post1/33.jpg" alt=""
+                                                data-fancybox="gallery-a" data-caption="img 4">
+                                        </li>
+                                        <li class="other-images-item">
+                                            <img class="img-fluid" src="assets/img/post1/34.jpg" alt=""
+                                                data-fancybox="gallery-a" data-caption="img 5">
+                                        </li>
+                                    </ul>
+                                    <img class="img-fluid post-image" src="assets/img/post1/07.jpg" alt=""
+                                        data-fancybox="gallery-a" data-caption="img 1">
+                                    <div class="post-downloads">
+                                        <a href="#0" class="post-downloads-item">
+                                            <i class="bi bi-file-pdf"></i>
+                                            Document.pdf
+                                        </a>
+                                        <a href="#0" class="post-downloads-item">
+                                            <i class="bi bi-file-play"></i>
+                                            Presentation.mp4
+                                        </a>
+                                        <a href="#0" class="post-downloads-item">
+                                            <i class="bi bi-file-zip"></i>
+                                            Content.rar
                                         </a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-                        <div class="flipbox mb-30 wow fadeInUp" data-wow-delay="0.25s">
-                            <div class="flipbox-font">
-                                <div class="flipbox-inner">
-                                    <div class="flipbox-icon">
-                                        <i class="bi bi-globe "></i>
-                                    </div>
-                                    <div class="flipbox-title">
-                                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flipbox-back">
-                                <div class="flipbox-inner">
-                                    <div class="flipbox-title">
-                                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    </div>
-                                    <div class="flipbox-desc">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, molestiae
-                                        </p>
-                                    </div>
-                                    <div class="flipbox-actions">
-                                        <a class="custom-button custom-button-sm" href="https://www.youtube.com/">Start
-                                            Now</a>
-                                        <a class="animated-button animated-button-sm" href="assets/video/example.mp4"
-                                            data-fancybox data-caption="example video">
-                                            <i class="bi bi-play-fill "></i>
-                                            <div class="spinner"></div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-                        <div class="flipbox mb-30 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="flipbox-font">
-                                <div class="flipbox-inner">
-                                    <div class="flipbox-icon">
-                                        <i class="bi bi-globe "></i>
-                                    </div>
-                                    <div class="flipbox-title">
-                                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flipbox-back">
-                                <div class="flipbox-inner">
-                                    <div class="flipbox-title">
-                                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    </div>
-                                    <div class="flipbox-desc">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, molestiae
-                                        </p>
-                                    </div>
-                                    <div class="flipbox-actions">
-                                        <a class="custom-button custom-button-sm" href="https://www.youtube.com/">Start
-                                            Now</a>
-                                        <a class="animated-button animated-button-sm" href="assets/video/example.mp4"
-                                            data-fancybox data-caption="example video">
-                                            <i class="bi bi-play-fill "></i>
-                                            <div class="spinner"></div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-6">
-                        <div class="flipbox mb-30 wow fadeInUp" data-wow-delay="1s">
-                            <div class="flipbox-font">
-                                <div class="flipbox-inner">
-                                    <div class="flipbox-icon">
-                                        <i class="bi bi-globe "></i>
-                                    </div>
-                                    <div class="flipbox-title">
-                                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flipbox-back">
-                                <div class="flipbox-inner">
-                                    <div class="flipbox-title">
-                                        <h3>Lorem ipsum dolor sit amet consectetur</h3>
-                                    </div>
-                                    <div class="flipbox-desc">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, molestiae
-                                        </p>
-                                    </div>
-                                    <div class="flipbox-actions">
-                                        <a class="custom-button custom-button-sm" href="https://www.youtube.com/">Start
-                                            Now</a>
-                                        <a class="animated-button animated-button-sm" href="assets/video/example.mp4"
-                                            data-fancybox data-caption="example video">
-                                            <i class="bi bi-play-fill "></i>
-                                            <div class="spinner"></div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <section class="main-section about-us1">
-                <div class="row">
-                    <div class="col wow fadeInUpBig" data-wow-offset="400">
-                        <span class="mini-title">about us</span>
-                        <h2 class="section-title">Lorem ipsum dolor sit amet, consectetur <span
-                                class="highlight">1980.</span></h2>
-                        <p class="main-subtitle mb-5">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquid magnam possimus
-                            quas qui est accusantium hic. Ipsa, necessitatibus excepturi.
-                        </p>
-                        <div class="row row-cols-2 g-4">
-                            <!-- single about us item -->
+                            </div>
                             <div class="col">
-                                <div class="aboutus-item">
-                                    <div class="aboutus-item-icon">
-                                        <i class="bi bi-award"></i>
-                                    </div>
-                                    <div class="aboutus-item-text">
-                                        <h6>Best Of Field</h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, atque!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- single about us item -->
-                            <div class="col">
-                                <div class="aboutus-item">
-                                    <div class="aboutus-item-icon">
-                                        <i class="bi bi-controller"></i>
-                                    </div>
-                                    <div class="aboutus-item-text">
-                                        <h6>Best Of Field</h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, atque!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- single about us item -->
-                            <div class="col">
-                                <div class="aboutus-item">
-                                    <div class="aboutus-item-icon">
-                                        <i class="bi bi-map"></i>
-                                    </div>
-                                    <div class="aboutus-item-text">
-                                        <h6>Best Of Field</h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, atque!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- single about us item -->
-                            <div class="col">
-                                <div class="aboutus-item">
-                                    <div class="aboutus-item-icon">
-                                        <i class="bi bi-patch-question"></i>
-                                    </div>
-                                    <div class="aboutus-item-text">
-                                        <h6>Best Of Field</h6>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, atque!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col wow fadeInUpBig" data-wow-offset="400" data-wow-delay="0.25s">
-                        <div class="single_banner_thumb tilt">
-                            <div class="banner_shape">
-                                <div class="banner_shape_inner1 bounce-animate5">
-                                    <img src="assets/img/shape1/2.png" alt="">
-                                </div>
-                                <div class="banner_shape_inner2 bounce-animate">
-                                    <img src="assets/img/shape1/3.png" alt="">
-                                </div>
-                                <div class="banner_shape_inner3 rotating">
-                                    <img src="assets/img/shape1/4.png" alt="">
-                                </div>
-                                <div class="banner_shape_inner4 bounce-animate2">
-                                    <img src="assets/img/shape1/text1.png" alt="">
-                                </div>
-                                <div class="banner_shape_inner5">
-                                    <img src="assets/img/shape1/text2.png" alt="">
-                                </div>
-                                <div class="banner_shape_inner6 bounce-animate3">
-                                    <img src="assets/img/shape1/text3.png" alt="">
-                                </div>
-                            </div>
-                            <div class="single_banner_thumb_inner">
-                                <img src="assets/img/shape1/1.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="main-section services2">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-                    <!-- single item -->
-                    <div class="col anim" animMode="animate__flipInY" animDuration="animate_slow">
-                        <div class="service2-item">
-                            <i class="bi bi-terminal"></i>
-                            <h4>Web Develpment</h4>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente expedita cum commodi
-                                ipsum rem delectus?
-                            </p>
-                            <a href="#0">
-                                Read More
-                                <i class="bi bi-arrow-right vertical-center"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- single item -->
-                    <div class="col anim" animMode="animate__flipInY" animDuration="animate_slow">
-                        <div class="service2-item">
-                            <i class="bi bi-terminal"></i>
-                            <h4>Web Develpment</h4>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente expedita cum commodi
-                                ipsum rem delectus?
-                            </p>
-                            <a href="#0">
-                                Read More
-                                <i class="bi bi-arrow-right vertical-center"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- single item -->
-                    <div class="col anim" animMode="animate__flipInY" animDuration="animate_slow">
-                        <div class="service2-item">
-                            <i class="bi bi-terminal"></i>
-                            <h4>Web Develpment</h4>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente expedita cum commodi
-                                ipsum rem delectus?
-                            </p>
-                            <a href="#0">
-                                Read More
-                                <i class="bi bi-arrow-right vertical-center"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- single item -->
-                    <div class="col anim" animMode="animate__flipInY" animDuration="animate_slow">
-                        <div class="service2-item">
-                            <i class="bi bi-terminal"></i>
-                            <h4>Web Develpment</h4>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente expedita cum commodi
-                                ipsum rem delectus?
-                            </p>
-                            <a href="#0">
-                                Read More
-                                <i class="bi bi-arrow-right vertical-center"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- single item -->
-                    <div class="col anim" animMode="animate__flipInY" animDuration="animate_slow">
-                        <div class="service2-item">
-                            <i class="bi bi-terminal"></i>
-                            <h4>Web Develpment</h4>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente expedita cum commodi
-                                ipsum rem delectus?
-                            </p>
-                            <a href="#0">
-                                Read More
-                                <i class="bi bi-arrow-right vertical-center"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- single item -->
-                    <div class="col anim" animMode="animate__flipInY" animDuration="animate_slow">
-                        <div class="service2-item">
-                            <i class="bi bi-terminal"></i>
-                            <h4>Web Develpment</h4>
-                            <p>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente expedita cum commodi
-                                ipsum rem delectus?
-                            </p>
-                            <a href="#0">
-                                Read More
-                                <i class="bi bi-arrow-right vertical-center"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="main-section about-us2">
-                <div class="row row-cols-2">
-                    <div class="col wow fadeInUpBig d-flex align-items-center" data-wow-offset="400"
-                        data-wow-delay="0.25s">
-                        <img class="img-fluid" src="assets/img/shape2.png" alt="">
-                    </div>
-                    <div class="col wow fadeInUpBig" data-wow-offset="400">
-                        <span class="mini-title">why choose us</span>
-                        <h2 class="section-title">
-                            Lorem ipsum dolor sit amet <span class="highlight">consectetur</span> dolor.
-                        </h2>
-                        <p class="main-subtitle mb-5">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, aliquid magnam possimus
-                            quas qui est accusantium hic. Ipsa, necessitatibus excepturi.
-                        </p>
-                        <ul>
-                            <li class="aboutus2-item">
-                                <span>01.</span>
-                                <div class="aboutus2-item-content">
-                                    <h5>Powerful Strategies</h5>
+                                <div class="mini-description">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-                                        possimus,
-                                        beatae tenetur eum neque quaerat?
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab a eum voluptas hic,
+                                        cum impedit modi sit voluptates in non, atque distinctio. Unde magni
+                                        perspiciatis sint exercitationem fuga natus impedit!
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, autem.
+                                    </p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic <a href="#0">optio dolorum</a>
+                                        quis architecto similique.
                                     </p>
                                 </div>
-                            </li>
-                            <li class="aboutus2-item">
-                                <span>02.</span>
-                                <div class="aboutus2-item-content">
-                                    <h5>Powerful Strategies</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-                                        possimus,
-                                        beatae tenetur eum neque quaerat?
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="aboutus2-item">
-                                <span>03.</span>
-                                <div class="aboutus2-item-content">
-                                    <h5>Powerful Strategies</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
-                                        possimus,
-                                        beatae tenetur eum neque quaerat?
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="custom-button reverse" href="#0">Get in Touch</a>
+                            </div>
+                        </div>
                     </div>
+                    <!-- ful description -->
+                    <section class="post-section full-description">
+                        <h3 class="section-header before-blue">Description</h3>
+                        <div class="text closed">
+                            <p>
+                                <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Quod et
+                                facilis animi officiis
+                                placeat pariatur molestiae perspiciatis eum dolore ea quibusdam reprehenderit tenetur
+                                odit dignissimos voluptates, nesciunt possimus autem enim.
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor sit <strong>amet consectetur</strong> adipisicing elit. Harum,
+                                accusantium pariatur!
+                                Iure nam alias culpa ut ullam itaque unde mollitia, quaerat quibusdam vel excepturi
+                                facilis hic repudiandae est nostrum eius tempora maiores. Aperiam, placeat enim? Odio
+                                beatae possimus corrupti perspiciatis.
+                            </p>
+
+                            <h2>
+                                Lorem ipsum dolor sit amet ?
+                            </h2>
+                            <p>
+                                <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Quod et
+                                facilis animi officiis
+                                placeat pariatur molestiae perspiciatis eum dolore ea quibusdam reprehenderit tenetur
+                                odit dignissimos voluptates, nesciunt possimus autem enim.
+                            </p>
+                            <p>
+                                <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Quod et
+                                facilis animi officiis
+                                placeat pariatur molestiae perspiciatis eum dolore ea quibusdam reprehenderit tenetur
+                                odit dignissimos voluptates, nesciunt possimus autem enim.
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor sit <strong>amet consectetur</strong> adipisicing elit. Harum,
+                                accusantium pariatur!
+                                Iure nam alias culpa ut ullam itaque unde mollitia, quaerat quibusdam vel excepturi
+                                facilis hic repudiandae est <a href="#0">nostrum eius tempora maiores</a>. Aperiam,
+                                placeat enim? Odio
+                                beatae possimus corrupti perspiciatis.
+                            </p>
+
+                            <h2>
+                                Lorem ipsum dolor sit amet consectetur ?
+                            </h2>
+                            <p>
+                                <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Quod et
+                                facilis animi officiis
+                                placeat pariatur molestiae perspiciatis eum dolore ea quibusdam reprehenderit tenetur
+                                odit dignissimos voluptates, nesciunt possimus autem enim.
+                            </p>
+                            <p>
+                                <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Quod et
+                                facilis animi officiis
+                                placeat pariatur molestiae perspiciatis eum dolore ea quibusdam reprehenderit tenetur
+                                odit dignissimos voluptates, nesciunt possimus autem enim.
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor sit <strong>amet consectetur</strong> adipisicing elit. Harum,
+                                accusantium pariatur!
+                                Iure nam alias culpa ut ullam itaque unde mollitia, quaerat quibusdam vel excepturi
+                                facilis hic repudiandae est nostrum eius tempora maiores. Aperiam, placeat enim? Odio
+                                beatae possimus corrupti perspiciatis.
+                            </p>
+
+                            <h2>
+                                Lorem ipsum dolor sit amet ?
+                            </h2>
+                            <p>
+                                <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Quod et
+                                facilis animi officiis
+                                placeat pariatur molestiae perspiciatis eum dolore ea quibusdam reprehenderit tenetur
+                                odit dignissimos voluptates, nesciunt possimus autem enim.
+                            </p>
+                            <p>
+                                <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Quod et
+                                facilis animi officiis
+                                placeat pariatur molestiae perspiciatis eum dolore ea quibusdam reprehenderit tenetur
+                                odit dignissimos voluptates, nesciunt possimus autem enim.
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor sit <strong>amet consectetur</strong> adipisicing elit. Harum,
+                                accusantium pariatur!
+                                Iure nam alias culpa ut ullam itaque unde mollitia, quaerat quibusdam vel excepturi
+                                facilis hic repudiandae est <a href="#0">nostrum eius tempora maiores</a>. Aperiam,
+                                placeat enim? Odio
+                                beatae possimus corrupti perspiciatis.
+                            </p>
+
+                            <h2>
+                                Lorem ipsum dolor sit amet consectetur ?
+                            </h2>
+                            <p>
+                                <strong>Lorem ipsum</strong> dolor sit amet consectetur adipisicing elit. Quod et
+                                facilis animi officiis
+                                placeat pariatur molestiae perspiciatis eum dolore ea quibusdam reprehenderit tenetur
+                                odit dignissimos voluptates, nesciunt possimus autem enim.
+                            </p>
+                        </div>
+                        <a class="des-expand" href="#0">
+                            Read more
+                            <i class="bi bi-chevron-down"></i>
+                        </a>
+                    </section>
+                    <!-- comments section -->
+                    <section class="post-section comments">
+                        <div class="head">
+                            <h3 class="section-header before-red">Comments</h3>
+                            <a class="new-comment" data-bs-toggle="modal" data-bs-target="#comment-modal">Send
+                                Comment</a>
+                        </div>
+                        <!-- comments container -->
+                        <div class="comments-wrapper">
+                            <!-- single comment -->
+                            <div class="comment">
+                                <div class="parent-comment">
+                                    <div class="comment-profile">
+                                        <img class="img-fluid" src="assets/img/avatar.png" alt="Username">
+                                        <span class="role">User</span>
+                                    </div>
+                                    <div class="comment-body">
+                                        <div class="comment-head">
+                                            <div class="comment-stat">
+                                                <h5 class="comment-owner">Username</h5>
+                                                <span class="comment-date">04/04/2024</span>
+                                            </div>
+                                            <div class="comment-actions">
+                                                <span class="show-replies">
+                                                    Replies (2)
+                                                    <i class="bi bi-chevron-down"></i>
+                                                </span>
+                                                <a class="like-comment" href="#0"><i class="bi bi-heart-fill"></i></a>
+                                                <a class="reply-comment" href="#0"><i class="bi bi-reply-fill"></i></a>
+                                            </div>
+                                        </div>
+                                        <p class="comment-text">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis odio
+                                            accusantium, dolorem, libero sapiente quas porro quasi doloribus minus nisi
+                                            quae possimus soluta inventore ipsum minima praesentium! Voluptates,
+                                            repellendus?
+                                        </p>
+
+                                        <!-- all replies of the comment -->
+                                        <div class="comment-replies">
+                                            <!-- single reply comment -->
+                                            <div class="comment comment-reply">
+                                                <div class="parent-comment">
+                                                    <div class="comment-profile">
+                                                        <img class="img-fluid" src="assets/img/avatar.png"
+                                                            alt="Username">
+                                                        <span class="role">User</span>
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        <div class="comment-head">
+                                                            <div class="comment-stat">
+                                                                <h5 class="comment-owner">Username</h5>
+                                                                <span class="comment-date">04/04/2024</span>
+                                                            </div>
+                                                        </div>
+                                                        <p class="comment-text">
+                                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
+                                                            quis odio
+                                                            accusantium, dolorem, libero sapiente quas porro quasi
+                                                            doloribus minus nisi
+                                                            quae possimus soluta inventore ipsum minima praesentium!
+                                                            Voluptates,
+                                                            repellendus?
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- single reply comment -->
+                                            <div class="comment comment-reply">
+                                                <div class="parent-comment">
+                                                    <div class="comment-profile">
+                                                        <img class="img-fluid" src="assets/img/avatar.png"
+                                                            alt="Username">
+                                                        <span class="role">User</span>
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        <div class="comment-head">
+                                                            <div class="comment-stat">
+                                                                <h5 class="comment-owner">Username</h5>
+                                                                <span class="comment-date">04/04/2024</span>
+                                                            </div>
+                                                        </div>
+                                                        <p class="comment-text">
+                                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
+                                                            quis odio
+                                                            accusantium, dolorem, libero sapiente quas porro quasi
+                                                            doloribus minus nisi
+                                                            quae possimus soluta inventore ipsum minima praesentium!
+                                                            Voluptates,
+                                                            repellendus?
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single comment -->
+                            <div class="comment">
+                                <div class="parent-comment">
+                                    <div class="comment-profile">
+                                        <img class="img-fluid" src="assets/img/avatar.png" alt="Username">
+                                        <span class="role">User</span>
+                                    </div>
+                                    <div class="comment-body">
+                                        <div class="comment-head">
+                                            <div class="comment-stat">
+                                                <h5 class="comment-owner">Username</h5>
+                                                <span class="comment-date">04/04/2024</span>
+                                            </div>
+                                            <div class="comment-actions">
+                                                <span class="show-replies">
+                                                    Replies (2)
+                                                    <i class="bi bi-chevron-down"></i>
+                                                </span>
+                                                <a class="like-comment" href="#0"><i class="bi bi-heart-fill"></i></a>
+                                                <a class="reply-comment" href="#0"><i class="bi bi-reply-fill"></i></a>
+                                            </div>
+                                        </div>
+                                        <p class="comment-text">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis odio
+                                            accusantium, dolorem, libero sapiente quas porro quasi doloribus minus nisi
+                                            quae possimus soluta inventore ipsum minima praesentium! Voluptates,
+                                            repellendus?
+                                        </p>
+
+                                        <!-- all replies of the comment -->
+                                        <div class="comment-replies">
+                                            <!-- single reply comment -->
+                                            <div class="comment comment-reply">
+                                                <div class="parent-comment">
+                                                    <div class="comment-profile">
+                                                        <img class="img-fluid" src="assets/img/avatar.png"
+                                                            alt="Username">
+                                                        <span class="role">User</span>
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        <div class="comment-head">
+                                                            <div class="comment-stat">
+                                                                <h5 class="comment-owner">Username</h5>
+                                                                <span class="comment-date">04/04/2024</span>
+                                                            </div>
+                                                        </div>
+                                                        <p class="comment-text">
+                                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
+                                                            quis odio
+                                                            accusantium, dolorem, libero sapiente quas porro quasi
+                                                            doloribus minus nisi
+                                                            quae possimus soluta inventore ipsum minima praesentium!
+                                                            Voluptates,
+                                                            repellendus?
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
-
-        </div>
-
-        <section class="carousel-section">
-            <div class="owl-carousel owl-loaded">
-                <div class="owl-stage-outer">
-                    <div class="owl-stage">
-                        <div class="owl-item">
-                            <a href="#0" class="carousel-section-item">
-                                <img class="img-fluid" src="assets/img/Unnamed.jpg" alt="">
-                                <div class="carousel-section-item-overlay">
-                                    <div class="carousel-section-item-content">
-                                        <h4>Data Processing</h4>
-                                        <p>Lorem ipsum dolor</p>
+                <div class="col col-3">
+                    <div class="other-posts">
+                        <div class="swiper others-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 1 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a href="#0" class="carousel-section-item">
-                                <img class="img-fluid" src="assets/img/Unnamed.jpg" alt="">
-                                <div class="carousel-section-item-overlay">
-                                    <div class="carousel-section-item-content">
-                                        <h4>Data Processing</h4>
-                                        <p>Lorem ipsum dolor</p>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 2 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a href="#0" class="carousel-section-item">
-                                <img class="img-fluid" src="assets/img/Unnamed.jpg" alt="">
-                                <div class="carousel-section-item-overlay">
-                                    <div class="carousel-section-item-content">
-                                        <h4>Data Processing</h4>
-                                        <p>Lorem ipsum dolor</p>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 3 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a href="#0" class="carousel-section-item">
-                                <img class="img-fluid" src="assets/img/Unnamed.jpg" alt="">
-                                <div class="carousel-section-item-overlay">
-                                    <div class="carousel-section-item-content">
-                                        <h4>Data Processing</h4>
-                                        <p>Lorem ipsum dolor</p>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 4 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a href="#0" class="carousel-section-item">
-                                <img class="img-fluid" src="assets/img/Unnamed.jpg" alt="">
-                                <div class="carousel-section-item-overlay">
-                                    <div class="carousel-section-item-content">
-                                        <h4>Data Processing</h4>
-                                        <p>Lorem ipsum dolor</p>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 5 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a href="#0" class="carousel-section-item">
-                                <img class="img-fluid" src="assets/img/Unnamed.jpg" alt="">
-                                <div class="carousel-section-item-overlay">
-                                    <div class="carousel-section-item-content">
-                                        <h4>Data Processing</h4>
-                                        <p>Lorem ipsum dolor</p>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 6 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="owl-item">
-                            <a href="#0" class="carousel-section-item">
-                                <img class="img-fluid" src="assets/img/Unnamed.jpg" alt="">
-                                <div class="carousel-section-item-overlay">
-                                    <div class="carousel-section-item-content">
-                                        <h4>Data Processing</h4>
-                                        <p>Lorem ipsum dolor</p>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 7 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </a>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 8 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 9 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 10 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 11 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 12 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 13 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 14 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 15 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 16 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 17 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="other-posts-item">
+                                        <div class="other-posts-item-head">
+                                            <img class="img-fluid" src="assets/img/post1/07.jpg" alt="post1">
+                                            <div class="other-posts-statuses">
+                                                <div class="other-posts-likes-count">
+                                                    <span>56</span>
+                                                    <i class="bi bi-heart"></i>
+                                                </div>
+                                                <div class="other-posts-views-count">
+                                                    <span>117</span>
+                                                    <i class="bi bi-eye"></i>
+                                                </div>
+                                                <div class="other-posts-comments-count">
+                                                    <span>22</span>
+                                                    <i class="bi bi-chat"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="other-posts-item-body">
+                                            <h3>Post 18 Title</h3>
+                                            <a class="post-button" href="">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer">
@@ -753,6 +1064,27 @@
         </div>
     </div>
 
+    <div class="modal fade dark-modal rounded-0" id="comment-modal" tabindex="-1" aria-labelledby="" aria-hidden="true"
+        data-bs-theme="dark">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content rounded-3">
+                <div class="modal-header">
+                    <h4 class="comment-modal-title">Send your comment</h4>
+                    <button type="button" class="btn-close d-block w-auto mx-0 me-auto" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <input type="text" placeholder="Title">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Body"></textarea>
+                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                        <input type="submit" class="post-button" href="#0"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal -->
     <div class="modal fade dark-modal rounded-0" id="search-modal" tabindex="-1" aria-labelledby="" aria-hidden="true"
         data-bs-theme="dark">
@@ -784,34 +1116,124 @@
     <script src="assets/fancybox/fancybox.umd.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/owl-carousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-        $(document).ready(function () {
-            $(".owl-carousel").owlCarousel({
-                items: 4,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 4000,
-                dots: true,
-                smartSpeed: 1500,
-                margin: 30,
 
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    576: {
-                        items: 2
-                    },
-                    768: {
-                        items: 3
-                    },
-                    992: {
-                        items: 4
-                    }
-                }
-            });
+        $(window).on('load', function () {
+            setLike();
         });
+        $(document).ready(function () {
+
+            $('.others-swiper').height($('.general-content').height());
+
+            // configure the post is liked or not
+            setLike();
+
+            $('.other-images-item img').click(function (e) {
+                e.preventDefault();
+
+                $('.other-images-item img').each(function (index, element) {
+                    $(this).removeClass('selected');
+                });
+
+                var item = $(this);
+                $(item).addClass('selected');
+                var data_fanybox = $(item).attr('data-fancybox');
+                var data_caption = $(item).attr('data-caption');
+                var src = $(item).attr('src');
+                var post = $('.post-image');
+                $(post).attr('data-fancybox', data_fanybox);
+                $(post).attr('data-caption', data_caption);
+                $(post).attr('src', src);
+            });
+
+
+            $('.des-expand').click(function (e) {
+                var iUp = document.createElement('i');
+                var iDown = document.createElement('i');
+                $(iUp).addClass('bi bi-chevron-up vertical-center');
+                $(iDown).addClass('bi bi-chevron-down vertical-center');
+                console.log(iUp)
+                console.log(iDown)
+
+                if ($('.full-description .text').hasClass('closed')) {
+                    $('.des-expand').text('Read less ');
+                    $('.des-expand').append(iUp);
+                } else {
+                    $('.des-expand').text('Read more ');
+                    $('.des-expand').append(iDown);
+                }
+                $('.full-description .text').toggleClass('closed');
+            });
+
+
+            var heightAll = parseInt($('.other-posts').height());
+            var heightOther = parseInt($('.other-posts-item').height());
+            var perView = Math.round(heightAll / heightOther);
+            console.log(perView);
+            var othersSwiper = new Swiper(".others-swiper", {
+                direction: "vertical",
+                slidesPerView: 7,
+                allowTouchMove: true,
+                draggable: true,
+                mousewheel: true,
+                loop: true,
+            });
+
+            $('.show-replies').click(function (e) { 
+                $(this).parent().parent().parent().find('.comment-replies').slideToggle();
+            });
+
+        });
+
+        function setLike() {
+            var isLiked = $('.like-post').attr('data-is-liked');
+            if (isLiked === 'true') {
+                $('.like-post').find('span').text('Liked');
+                $('.like-post').find('i').addClass('bi-heart-fill');
+                $('.like-post').find('i').removeClass('bi-heart');
+                $('.like-post').attr('data-is-liked', true);
+            } else if (isLiked === 'false') {
+                $('.like-post').find('span').text('Like');
+                $('.like-post').find('i').addClass('bi-heart');
+                $('.like-post').find('i').removeClass('bi-heart-fill');
+                $('.like-post').attr('data-is-liked', false);
+            }
+        }
+
+        function changeLike(el) {
+            var isLiked = $(el).attr('data-is-liked');
+            if (isLiked === 'false') {
+                $(el).find('span').text('Liked');
+                $(el).find('i').addClass('bi-heart-fill');
+                $(el).find('i').removeClass('bi-heart');
+                $(el).attr('data-is-liked', true);
+                $.ajax({
+                    type: "method",
+                    url: "url",
+                    data: "data",
+                    dataType: "dataType",
+                    success: function (response) {
+
+                    }
+                });
+            } else if (isLiked === 'true') {
+                $(el).find('span').text('Like');
+                $(el).find('i').addClass('bi-heart');
+                $(el).find('i').removeClass('bi-heart-fill');
+                $(el).attr('data-is-liked', false);
+                $.ajax({
+                    type: "method",
+                    url: "url",
+                    data: "data",
+                    dataType: "dataType",
+                    success: function (response) {
+
+                    }
+                });
+            }
+        }
     </script>
 </body>
 

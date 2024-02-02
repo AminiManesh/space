@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post</title>
+    <title>Post 1</title>
     <link rel="stylesheet" href="assets/bootstrap-5.3.2/css/bootstrap.rtl.min.css">
     <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/post.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
@@ -72,7 +73,7 @@
     <main class="general-content">
         <div class="container">
             <div class="row">
-                <div class="col col-9">
+                <div class="col col-12 col-xl-9">
                     <div class="post-section first-section">
                         <div class="post-title">
                             <h1>Post title ipsum</h1>
@@ -96,7 +97,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col">
+                            <div class="col col-12 col-lg-6">
                                 <div class="images-wrapper">
                                     <ul class="other-images">
                                         <li class="other-images-item">
@@ -139,7 +140,7 @@
                                 </div>
 
                             </div>
-                            <div class="col">
+                            <div class="col col-12 col-lg-6 mt-3 mt-lg-0">
                                 <div class="mini-description">
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab a eum voluptas hic,
@@ -150,7 +151,8 @@
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, autem.
                                     </p>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic <a href="#0">optio dolorum</a>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa hic <a
+                                            href="#0">optio dolorum</a>
                                         quis architecto similique.
                                     </p>
                                 </div>
@@ -293,7 +295,7 @@
                                                     <i class="bi bi-chevron-down"></i>
                                                 </span>
                                                 <a class="like-comment" href="#0"><i class="bi bi-heart-fill"></i></a>
-                                                <a class="reply-comment" href="#0"><i class="bi bi-reply-fill"></i></a>
+                                                <a class="reply-comment" href="#0" data-bs-toggle="modal" data-bs-target="#comment-modal"><i class="bi bi-reply-fill"></i></a>
                                             </div>
                                         </div>
                                         <p class="comment-text">
@@ -383,7 +385,70 @@
                                                     <i class="bi bi-chevron-down"></i>
                                                 </span>
                                                 <a class="like-comment" href="#0"><i class="bi bi-heart-fill"></i></a>
-                                                <a class="reply-comment" href="#0"><i class="bi bi-reply-fill"></i></a>
+                                                <a class="reply-comment" href="#0" data-bs-toggle="modal" data-bs-target="#comment-modal"><i class="bi bi-reply-fill"></i></a>
+                                            </div>
+                                        </div>
+                                        <p class="comment-text">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At quis odio
+                                            accusantium, dolorem, libero sapiente quas porro quasi doloribus minus nisi
+                                            quae possimus soluta inventore ipsum minima praesentium! Voluptates,
+                                            repellendus?
+                                        </p>
+
+                                        <!-- all replies of the comment -->
+                                        <div class="comment-replies">
+                                            <!-- single reply comment -->
+                                            <div class="comment comment-reply">
+                                                <div class="parent-comment">
+                                                    <div class="comment-profile">
+                                                        <img class="img-fluid" src="assets/img/avatar.png"
+                                                            alt="Username">
+                                                        <span class="role">User</span>
+                                                    </div>
+                                                    <div class="comment-body">
+                                                        <div class="comment-head">
+                                                            <div class="comment-stat">
+                                                                <h5 class="comment-owner">Username</h5>
+                                                                <span class="comment-date">04/04/2024</span>
+                                                            </div>
+                                                        </div>
+                                                        <p class="comment-text">
+                                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At
+                                                            quis odio
+                                                            accusantium, dolorem, libero sapiente quas porro quasi
+                                                            doloribus minus nisi
+                                                            quae possimus soluta inventore ipsum minima praesentium!
+                                                            Voluptates,
+                                                            repellendus?
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single comment -->
+                            <div class="comment">
+                                <div class="parent-comment">
+                                    <div class="comment-profile">
+                                        <img class="img-fluid" src="assets/img/avatar.png" alt="Username">
+                                        <span class="role">User</span>
+                                    </div>
+                                    <div class="comment-body">
+                                        <div class="comment-head">
+                                            <div class="comment-stat">
+                                                <h5 class="comment-owner">Username</h5>
+                                                <span class="comment-date">04/04/2024</span>
+                                            </div>
+                                            <div class="comment-actions">
+                                                <span class="show-replies">
+                                                    Replies (2)
+                                                    <i class="bi bi-chevron-down"></i>
+                                                </span>
+                                                <a class="like-comment" href="#0"><i class="bi bi-heart-fill"></i></a>
+                                                <a class="reply-comment" href="#0" data-bs-toggle="modal" data-bs-target="#comment-modal"><i class="bi bi-reply-fill"></i></a>
                                             </div>
                                         </div>
                                         <p class="comment-text">
@@ -430,7 +495,7 @@
                         </div>
                     </section>
                 </div>
-                <div class="col col-3">
+                <div class="col col-12 col-xl-3">
                     <div class="other-posts">
                         <div class="swiper others-swiper">
                             <div class="swiper-wrapper">
@@ -1125,7 +1190,6 @@
         });
         $(document).ready(function () {
 
-            $('.others-swiper').height($('.general-content').height());
 
             // configure the post is liked or not
             setLike();
@@ -1167,21 +1231,29 @@
                 $('.full-description .text').toggleClass('closed');
             });
 
-
-            var heightAll = parseInt($('.other-posts').height());
-            var heightOther = parseInt($('.other-posts-item').height());
-            var perView = Math.round(heightAll / heightOther);
+            var perView = 0;
+            if ($(window).width() >= 1200) {
+                $('.others-swiper').height($('.general-content').height());
+                var heightAll = parseInt($('.other-posts').height());
+                var heightOther = parseInt($('.other-posts-item').height());
+                perView = Math.floor(heightAll / heightOther) - 1;
+            } else {
+                perView = 4;
+            }
             console.log(perView);
             var othersSwiper = new Swiper(".others-swiper", {
                 direction: "vertical",
-                slidesPerView: 7,
+                slidesPerView: perView,
                 allowTouchMove: true,
                 draggable: true,
                 mousewheel: true,
                 loop: true,
+                autoplay: {
+                    delay: 5000,
+                },
             });
 
-            $('.show-replies').click(function (e) { 
+            $('.show-replies').click(function (e) {
                 $(this).parent().parent().parent().find('.comment-replies').slideToggle();
             });
 

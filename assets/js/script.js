@@ -81,12 +81,10 @@ $(document).ready(async function () {
 function navbarCheck() {
     if ($(window).scrollTop() >= 20) {
         $('.navbar').addClass('active');
-        $('.canvas-float-btn').css('top', '15px');
-        $('.canvas-float-btn').css('left', '15px');
+        $('.canvas-float-btn').addClass('move');
     } else if ($(window).scrollTop() === 0) {
         $('.navbar').removeClass('active');
-        $('.canvas-float-btn').css('top', '30px');
-        $('.canvas-float-btn').css('left', '30px');
+        $('.canvas-float-btn').removeClass('move');
     }
 }
 

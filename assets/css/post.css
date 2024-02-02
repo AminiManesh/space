@@ -1,5 +1,5 @@
-.navbar {
-    position: relative;
+.general-content {
+    margin-top: 120px;
 }
 
 .post-section {
@@ -75,6 +75,7 @@
     align-items: center;
     justify-content: start;
     margin-bottom: 5px;
+    flex-wrap: wrap;
 }
 
 .post-title h1 {
@@ -403,11 +404,13 @@
     padding: 0 4px;
     border-radius: 2px;
 }
+
 .comments .comment .comment-head .comment-actions {
     display: flex;
     align-items: center;
     gap: 15px;
 }
+
 .comments .comment .comment-head .comment-actions .like-comment {
     font-size: 18px;
     color: var(--main-red);

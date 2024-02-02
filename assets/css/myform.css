@@ -19,7 +19,7 @@
 
 .form-image {
     height: 100%;
-    width: 50%;
+    width: 100%;
 }
 
 .form-image img {
@@ -34,9 +34,9 @@
 
 .form-inputs {
     height: 100%;
-    width: 50%;
     object-fit: cover;
     padding: 20px;
+    width: 100%;
 }
 
 .myform {

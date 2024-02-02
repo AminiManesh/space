@@ -1,0 +1,125 @@
+@media screen and (max-width: 575px) {}
+
+@media screen and (min-width: 576px) {
+    .page-title {
+        font-size: 3.5rem;
+    }
+
+    .main-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 3.5rem;
+    }
+
+    .border-wrapper {
+        flex-wrap: nowrap;
+    }
+
+    .navbar .logo img {
+        width: 200px;
+    }
+
+    .navbar .account-actions {
+        gap: 20px;
+    }
+
+    .navbar .account-actions .account-signin,
+    .navbar .account-actions .account-signup {
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .canvas-float-btn {
+        top: 30px;
+        left: 30px;
+    }
+
+    .canvas-float-btn.move {
+        top: 15px;
+        left: 15px;
+    }
+
+    .border-wrapper.full {
+        flex: 1 1 auto;
+    }
+
+    .filter-section.full {
+        flex: 1 1 auto !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .about-1-image {
+        margin-top: 100px;
+    }
+
+    .header-text {
+        text-align: start;
+    }
+
+    .header-actions {
+        justify-content: start;
+    }
+
+    .filter {
+        flex-wrap: nowrap;
+    }
+
+    .border-wrapper {
+        flex-wrap: nowrap;
+        width: auto;
+    }
+
+    .form-image {
+        width: 50%;
+    }
+
+    .form-inputs {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-items {
+        display: flex;
+        padding: 0 100px;
+    }
+
+    .about-1-image {
+        margin-top: 0;
+    }
+
+    .banner_shape_inner5 {
+        right: -20px;
+    }
+
+    .banner_shape_inner3 {
+        left: 75%;
+        top: 20px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .navbar-items {
+        padding: 0 170px;
+    }
+
+    .main-section {
+        padding: 100px 0;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .banner_shape_inner3 {
+        top: 162px;
+        left: 92%;
+    }
+
+    .banner_shape_inner5 {
+        right: -140px;
+    }
+
+}

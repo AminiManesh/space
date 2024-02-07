@@ -13,6 +13,7 @@
 }
 
 .filter {
+    position: relative;
     display: flex;
     align-items: start;
     justify-content: start;
@@ -25,6 +26,12 @@
     background: var(--high-blue);
 
     flex-wrap: wrap;
+}
+
+.filter-add-post {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 .border-wrapper {
@@ -438,8 +445,78 @@
     font-size: 22px;
 }
 
+.post-status.message>i {
+    position: relative;
+}
+
+.post-status.message>i>span.message-numbers {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14px;
+    height: 14px;
+    top: -2px;
+    right: -8px;
+    border-radius: 50%;
+    font-size: 12px;
+    color: var(--white);
+    font-style: normal;
+    border: 2px solid var(--high-blue);
+    box-sizing: content-box;
+}
+
+.post-status.message>i.text-success>span.message-numbers {
+    background: var(--bs-success) !important;
+}
+
+.post-status.message>i.text-danger>span.message-numbers {
+    background: var(--bs-danger) !important;
+}
+
+.post-status.message>i.text-success>span.message-numbers {
+    background: var(--bs-success) !important;
+}
+
 .post-carousel {
     position: relative;
+}
+
+.post-carousel .owl-nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: -60px;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 26px;
+}
+
+.post-carousel .owl-nav>button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 120px;
+    transition: background 0.3s ease;
+}
+
+.post-carousel .owl-nav>button:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.post-carousel .owl-nav>button span {
+    padding: 10px !important;
+}
+.post-carousel .owl-nav .owl-prev {
+    border-radius: 0 5px 5px 0 !important;
+    overflow: hidden;
+}
+.post-carousel .owl-nav .owl-next {
+    right: 0;
+    border-radius: 5px 0 0 5px !important;
+    overflow: hidden;
 }
 
 .post-carousel .owl-dots {

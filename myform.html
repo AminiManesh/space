@@ -78,15 +78,18 @@
                 </div>
                 <div class="form-inputs">
                     <form class="myform" action="" method="post">
-                        <h1 class="form-title">Contact Us</h1>
-                        <input type="text" name="name" class="form-input form-name" placeholder="Name">
-                        <input type="email" name="email" class="form-input form-email" placeholder="Email">
-                        <input type="tel" name="phone" class="form-input form-phone" placeholder="Phone">
-                        <input type="text" name="description" class="form-input form-des" placeholder="Description">
-                        <label for="formFile" class="form-file-label">
-                            Attach your file...
-                            <input type="file" id="formFile" class="form-file">
-                        </label>
+                        <div class="form-inputs-holder">
+                            <h1 class="form-title">Contact Us</h1>
+                            <input type="text" name="name" class="form-input form-name" placeholder="Name" required>
+                            <input type="email" name="email" class="form-input form-email" placeholder="Email" required>
+                            <input type="tel" name="phone" class="form-input form-phone" placeholder="Phone">
+                            <textarea type="text" name="description" id="description" class="form-input form-des"
+                                placeholder="Description" cols="30"></textarea>
+                            <label for="formFile" class="form-file-label">
+                                Attach your file...
+                                <input type="file" id="formFile" class="form-file">
+                            </label>
+                        </div>
                         <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
                         <input type="submit" class="post-button form-submit">
                     </form>
@@ -298,6 +301,7 @@
     <script src="assets/fancybox/fancybox.umd.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/owl-carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/ckeditor.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

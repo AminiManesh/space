@@ -82,6 +82,7 @@ ul {
 }
 
 /* ------ */
+
 .post-button {
     display: block;
     width: 100%;
@@ -1258,6 +1259,7 @@ ul {
 
 .carousel-section .carousel-section-item {
     position: relative;
+    display: block;
 }
 
 .carousel-section .carousel-section-item-overlay {

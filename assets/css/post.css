@@ -191,21 +191,20 @@
 
 .other-posts-item-body h3 {
     font-size: 20px;
-    text-align: center;
+}
+
+.other-posts-item-subtitle {
+    line-height: 1.2;
+    font-size: 14px;
+    opacity: 0.5;
 }
 
 .other-posts-item-body .post-button {
     margin: 0 !important;
 }
 
-.other-posts-statuses {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
 .other-posts-statuses>* {
-    margin: 5px;
+    margin-bottom: 5px;
 }
 
 .other-posts-likes-count {

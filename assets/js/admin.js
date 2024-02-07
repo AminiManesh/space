@@ -50,7 +50,7 @@ function selectATag(tag) {
 
 function removeATag(tag) {
     selectedTags.pop(tag);
-    $('.selected-tags').find('.selected-tag:contains("'+ tag +'")').remove();
+    $('.selected-tags').find('.selected-tag:contains("' + tag + '")').remove();
     console.log(selectedTags);
 }
 
@@ -106,10 +106,14 @@ $(document).ready(function () {
     // posts carousel config
     $(".owl-carousel").owlCarousel({
         items: 1,
-        loop: true,
-        autoplayTimeout: 1000,
+        rewind: true,
+        autoplayTimeout: 5000,
         dot: true,
-        smartSpeed: 1000
+        smartSpeed: 2000,
+        autoplay: true,
+        nav: true,
+        mouseDrag: true,
+        touchDrag: true,
     });
 
     // set random show effect to posts
@@ -121,9 +125,9 @@ $(document).ready(function () {
 
     // trigger carousel autoplay when hovering in post image
     $('.owl-carousel').hover(function () {
-        $(this).trigger('play.owl.autoplay');
-    }, function () {
         $(this).trigger('stop.owl.autoplay');
+    }, function () {
+        $(this).trigger('play.owl.autoplay');
     });
 
     // add or remove a filter tag to selected filters section when it changes.
@@ -493,7 +497,7 @@ function createUploadedFile(file, formData) {
     $(uploadedFileInfoText).append(uploadedFileName);
     $(uploadedFileInfoText).append(uploadedFileSize);
 
-    
+
     $(uploadedFileInfo).append(uploadedFileInfoText);
 
     var uploadedFileRemove = document.createElement('a');

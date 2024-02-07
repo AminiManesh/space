@@ -37,6 +37,9 @@
 
             <!-- filter box -->
             <form class="filter" action="" method="get">
+                <div class="filter-add-post">
+                    <a class="btn btn-success" href="#0">Add Post</a>
+                </div>
                 <div class="border-wrapper">
                     <div class="filter-section">
                         <h3 class="filter-section-title">Roles</h3>
@@ -370,15 +373,15 @@
                                             <div class="owl-stage">
                                                 <div class="owl-item">
                                                     <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
+                                                        alt="Lorem ipsum dolor." data-fancybox="post-id-1" data-caption="post1 img1">
                                                 </div>
                                                 <div class="owl-item">
                                                     <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
+                                                        alt="Lorem ipsum dolor." data-fancybox="post-id-1" data-caption="post1 img2">
                                                 </div>
                                                 <div class="owl-item">
                                                     <img class="img-fluid" src="assets/img/landing-back.png"
-                                                        alt="Lorem ipsum dolor.">
+                                                        alt="Lorem ipsum dolor." data-fancybox="post-id-1" data-caption="post1 img3">
                                                 </div>
                                             </div>
                                         </div>
@@ -412,10 +415,15 @@
                                 <div class="post-statuses">
                                     <div class="message post-status" title="Message" data-bs-toggle="modal"
                                         data-bs-target="#status-modal">
-                                        <i class="bi bi-envelope text-success"></i>
-                                        <i class="bi bi-envelope-open text-danger"></i>
+                                        <i class="bi bi-envelope text-success">
+                                            <span class="message-numbers">5</span>
+                                        </i>
+                                        <i class="bi bi-envelope-open text-danger">
+                                            <span class="message-numbers">3</span>
+                                        </i>
                                     </div>
-                                    <div class="permission post-status" isOpen="true" title="Permission">
+                                    <div class="permission post-status" isOpen="true" title="Permission"
+                                        data-bs-toggle="modal" data-bs-target="#status-modal">
                                         <i class="bi bi-unlock text-success" id="isPermissionIcon"></i>
                                         <i class="bi bi-lock text-danger" id="isNotPermissionIcon"></i>
                                     </div>
@@ -538,27 +546,44 @@
         </div>
     </div>
 
-    <div class="offcanvas offcanvas-end dark-canvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"
-        data-bs-theme="dark">
+    <div class="offcanvas offcanvas-end dark-canvas" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel" data-bs-theme="dark">
+
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="">Menu</h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <div>
-                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
-                lists, etc.
-            </div>
-            <div class="dropdown mt-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                    Dropdown button
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </div>
+            <ul class="canvas-menu">
+                <li class="canvas-item">
+                    <a href="#0">Home</a>
+                </li>
+                <li class="canvas-item parent">
+                    <a href="#0">Pages</a>
+                    <ul class="canvas-menu child">
+                        <li class="canvas-item">
+                            <a href="#0">Child 1</a>
+                        </li>
+                        <li class="canvas-item">
+                            <a href="#0">Child 2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="canvas-item">
+                    <a href="#0">Cart</a>
+                </li>
+                <li class="canvas-item parent">
+                    <a href="#0">Category</a>
+                    <ul class="canvas-menu child">
+                        <li class="canvas-item">
+                            <a href="#0">Child 1</a>
+                        </li>
+                        <li class="canvas-item">
+                            <a href="#0">Child 2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 

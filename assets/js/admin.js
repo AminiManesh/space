@@ -418,19 +418,27 @@ function _(el) {
     return document.getElementById(el);
 }
 
+var uploadedFilesCount = 0;
+
 function uploadFile() {
-    var file = _("file1").files[0];
-    // alert(file.name+" | "+file.size+" | "+file.type);
-    var formdata = new FormData();
-    formdata.append(file.name, file);
-    var ajax = new XMLHttpRequest();
-    ajax.upload.addEventListener("progress", progressHandler, false);
-    ajax.addEventListener("load", (event) => { completeHandler(event, file, formdata) }, false);
-    ajax.addEventListener("error", errorHandler, false);
-    ajax.addEventListener("abort", abortHandler, false);
-    ajax.open("POST", "file_upload_parser.php"); // http://www.developphp.com/video/JavaScript/File-Upload-Progress-Bar-Meter-Tutorial-Ajax-PHP
-    //send file ajax here
-    ajax.send(formdata);
+    if (uploadedFilesCount < 3) {
+        var file = _("file1").files[0];
+        // alert(file.name+" | "+file.size+" | "+file.type);
+        var formdata = new FormData();
+        formdata.append(file.name, file);
+        var ajax = new XMLHttpRequest();
+        ajax.upload.addEventListener("progress", progressHandler, false);
+        ajax.addEventListener("load", (event) => { completeHandler(event, file, formdata) }, false);
+        ajax.addEventListener("error", errorHandler, false);
+        ajax.addEventListener("abort", abortHandler, false);
+        ajax.open("POST", "file_upload_parser.php"); // http://www.developphp.com/video/JavaScript/File-Upload-Progress-Bar-Meter-Tutorial-Ajax-PHP
+        //send file ajax here
+        ajax.send(formdata);
+
+        uploadedFilesCount++;
+    } else {
+        alert("You can't upload more than 3 files!");
+    }
 }
 
 function progressHandler(event) {

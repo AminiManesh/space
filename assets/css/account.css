@@ -1,0 +1,85 @@
+.general-content {
+    margin-top: 120px;
+    height: calc(100vh - 120px);
+}
+
+/* register and login form styles */
+.account-form-wrapper {
+    margin: 0 auto;
+    width: fit-content;
+    background: var(--high-blue);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.account-form-wrapper h1 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.account-form-input {
+    display: block;
+    width: 100%;
+    min-width: 300px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    color: var(--white);
+    background: rgba(6, 9, 34, 0.4);
+    border-bottom: 3px solid var(--light-blue);
+    padding: 5px 10px;
+    border-radius: 3px 3px 0 0;
+}
+
+.account-form-submit {
+    background: var(--mid-blue);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    display: block;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.account-form-check {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+    gap: 8px;
+}
+
+.account-form-check input {
+    display: none;
+}
+
+.account-form-check-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--light-blue);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.account-form-check-value i {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.account-form-check input:checked ~ .account-form-check-value i {
+    display: flex;
+    background-color: var(--light-blue);
+}
+
+.account-form-link {
+    display: block;
+    width: 100%;
+}

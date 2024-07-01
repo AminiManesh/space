@@ -74,6 +74,70 @@ $(document).ready(async function () {
         // switch language api
     });
 
+    $('.other-images-item img').click(function (e) {
+        e.preventDefault();
+
+        $('.other-images-item img').each(function (index, element) {
+            $(this).removeClass('selected');
+        });
+
+        var item = $(this);
+        $(item).addClass('selected');
+        var data_fanybox = $(item).attr('data-fancybox');
+        var data_caption = $(item).attr('data-caption');
+        var src = $(item).attr('src');
+        var post = $('.post-image');
+        $(post).attr('data-fancybox', data_fanybox);
+        $(post).attr('data-caption', data_caption);
+        $(post).attr('src', src);
+    });
+
+
+    $('.des-expand').click(function (e) {
+        var iUp = document.createElement('i');
+        var iDown = document.createElement('i');
+        $(iUp).addClass('bi bi-chevron-up vertical-center');
+        $(iDown).addClass('bi bi-chevron-down vertical-center');
+        console.log(iUp)
+        console.log(iDown)
+
+        if ($('.full-description .text').hasClass('closed')) {
+            $('.des-expand').text('Read less ');
+            $('.des-expand').append(iUp);
+        } else {
+            $('.des-expand').text('Read more ');
+            $('.des-expand').append(iDown);
+        }
+        $('.full-description .text').toggleClass('closed');
+    });
+
+    var perView = 0;
+    if ($(window).width() >= 1200) {
+        $('.others-swiper').height($('.general-content').height());
+        var heightAll = parseInt($('.other-posts').height());
+        var heightOther = parseInt($('.other-posts-item').height());
+        perView = Math.floor(heightAll / heightOther);
+    } else {
+        perView = 4;
+    }
+    console.log(perView);
+    var othersSwiper = new Swiper(".others-swiper", {
+        direction: "vertical",
+        slidesPerView: perView,
+        allowTouchMove: true,
+        draggable: true,
+        mousewheel: true,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+    });
+
+    $('.show-replies').click(function (e) {
+        $(this).parent().parent().parent().find('.comment-replies').slideToggle();
+    });
+
     await delay(1500);
     new WOW().init();
 });
